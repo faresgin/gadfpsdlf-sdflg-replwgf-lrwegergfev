@@ -826,9 +826,9 @@ client.on('message', async message => { // Alpha Codes Server.
                                 let bcMessage = new Discord.RichEmbed()
                                 .setTitle(`:loudspeaker: ${m.user.username}`)
                                 .setColor('GREEN')
-                                .addField(':pencil: **Sender:**', message.author.username, true)
-                                .addField(':globe_with_meridians: **Server:**', message.guild.name, true)
-                                .addField(':scroll: **Message:**', argsM.replace('[user]', m))
+                                .addField(':pencil: **:المرسل>>**', message.author.username, true)
+                                .addField(':globe_with_meridians: **:السيرفر>>**', message.guild.name, true)
+                                .addField(':scroll: **:الرساله>>**', argsM.replace('[user]', m))
                                 .setTimestamp()
                                 .setFooter(message.author.tag, message.author.avatarURL)
                                

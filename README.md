@@ -1,0 +1,2 @@
+# GMZNbotserversystemall
+gmznserver

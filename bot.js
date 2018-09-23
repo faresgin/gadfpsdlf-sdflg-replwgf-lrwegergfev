@@ -994,6 +994,45 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
  
 });
 
+//كود امر عمل تصويت من البوت في روم مخصص
+
+client.on('message' , message => {
+  var prefix = "*";
+  if(message.author.bot) return;
+  if(message.content.startsWith(prefix + "send")) {
+    let args = message.content.split(" ").slice(1);
+ 
+ 
+    let suggestmessage = args.join(" ").slice(22);
+    let suggestchannel = message.mentions.channels.first();
+ 
+    if (!suggestchannel) {
+        return message.reply("برجاء عمل منشن للروم")
+    }
+ 
+    if (!suggestmessage) {
+        return message.reply("برجاء كتابة النص الكتابي الذي سيرسل للروم")
+   
+         
+    }
+     message.delete();
+suggestchannel.send("@everyone || @here ");
+    let embed = new Discord.RichEmbed()
+        .addField("**تصويت عام للجميع**", `${suggestmessage}`)
+        .setFooter(`by ${message.author.tag}`)
+        .setTimestamp()
+    suggestchannel.send({
+        embed
+    }).then(msg => {
+        msg.react("✅").then(r => msg.react("❎"))
+    });
+ 
+ 
+    message.reply(`Your message is sended.`).then(msg => msg.delete(1000));
+    return;
+}
+});
+
 //none
          
 client.login(process.env.BOT_TOKEN);

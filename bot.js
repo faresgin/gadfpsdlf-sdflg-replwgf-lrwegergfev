@@ -649,5 +649,24 @@ client.on('message', message => {
                         }
                     });
 
+//كود معلومات البوت
+
+client.on('message', function(message) {
+        var prefix = "*";
+        var Color = ['bff442','f4d941','ea3c62','ffffff']
+        if (message.content.startsWith(prefix + 'bot')) {
+            var alpha= new Discord.RichEmbed()
+.setColor(`${Color[Math.floor(Math.random() * Color.length)]}`)
+.addField('**:crown: Servers**','**[ '+client.guilds.size+' ]**',true)
+.addField('**:bust_in_silhouette: Users**','**[ '+client.users.size+' ]**',true)
+.addField('**:earth_africa: Room**','**[ '+client.channels.size+' ]**',true)
+.setFooter('name  bot',`${client.user.avatarURL}`)
+.setTimestamp()
+message.channel.send({embed:alpha});
+}
+});
+
 //none
+
+
 client.login(process.env.BOT_TOKEN);

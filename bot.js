@@ -535,13 +535,7 @@ function play(guild, song) {
 
 //كود السبورت الهو سيرفر الدعم الفني
 
-client.on("message", function(message) {
-    if (message.content === "*support") {
-    return message.reply("https://discord.gg/Mwyp8d8")
-    .catch(console.error);
-    }
 
-  });
 
 //كود الانفيت لاضافة البوت
 

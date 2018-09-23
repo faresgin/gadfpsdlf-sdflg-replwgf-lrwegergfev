@@ -541,6 +541,8 @@ client.on("message", function(message) {
     .catch(console.error);
     }
 
+  });
+
 //كود الانفيت لاضافة البوت
 
 client.on("message", function(message) {

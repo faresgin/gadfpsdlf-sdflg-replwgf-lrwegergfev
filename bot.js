@@ -943,6 +943,11 @@ client.on('message', async message => { // Alpha Codes Server.
 
 //كود البرودكاست البدون اي شي فقط الكلام
 
+client.on('message', message => {
+    if (message.content.split(' ')[0] == 'nbc')
+       message.guild.members.forEach( member => {
+         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+ 
 
 //كود تغير البلاينج و الصوره والاسم
 

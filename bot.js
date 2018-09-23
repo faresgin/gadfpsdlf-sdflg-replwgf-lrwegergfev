@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '.'
+const prefix = '*'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -727,7 +727,7 @@ if (message.content.startsWith(adminprefix + 'ply')) {
     message.channel.sendMessage(`**${argresult} تم تغيير بلاينق البوت إلى **`)
 } else
  
-if (message.content.startsWith(adminprefix + 'st')) {
+if (message.content.startsWith(adminprefix + 'tw')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }

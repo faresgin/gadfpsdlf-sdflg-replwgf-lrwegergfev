@@ -533,7 +533,15 @@ function play(guild, song) {
 }
 });
 
-//none
+//كود السبورت الهو سيرفر الدعم الفني
+
+client.on("message", function(message) {
+    if (message.content === "*support") {
+    return message.reply("https://discord.gg/Mwyp8d8")
+    .catch(console.error);
+    }
+
+//nonde
 
 
 client.login(process.env.BOT_TOKEN);

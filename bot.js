@@ -963,6 +963,37 @@ if (message.content.startsWith(adminprefix + 'tw')) {
 }
 });
 
+//كود تقفيل الشات وفتحو
+
+client.on('message', message => {
+ 
+    if (message.content === "*cchat") {
+                        if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
+ 
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply(' ليس لديك صلاحيات');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: false
+ 
+           }).then(() => {
+               message.reply("تم تقفيل الشات ✅ ")
+           });
+             }
+if (message.content === "*uchat") {
+    if(!message.channel.guild) return message.reply(' هذا الامر فقط للسيرفرات !!');
+ 
+if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('ليس لديك صلاحيات');
+           message.channel.overwritePermissions(message.guild.id, {
+         SEND_MESSAGES: true
+ 
+           }).then(() => {
+               message.reply("تم فتح الشات✅")
+           });
+             }
+ 
+ 
+ 
+});
+
 //none
          
 client.login(process.env.BOT_TOKEN);

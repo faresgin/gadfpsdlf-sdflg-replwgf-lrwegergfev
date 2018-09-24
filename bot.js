@@ -2072,7 +2072,6 @@ client.on("guildCreate", guild => {
 
 const bot = new Discord.Client({disableEveryone: true});
 const Canvas = require('canvas') 
-const fs = module.require("fs"); 
 const r1 = require('snekfetch'); 
 
 

@@ -70,6 +70,7 @@ client.on('message', message => {
 .addField('     ** *uchat **  ' ,' **لفتح الشات تاني** ')
 .addField('     ** Welcom **  ' ,' **لعمل ترحيب ل شخص دخل جديد ب السيرفر سوي روم اسمو Welcome** ')
 .addField('     ** *role **  ' ,' **ل اعطاء رتبه لحد اكتب الامر ومنشنو** ')
+ .addField('     ** log **  ' ,' **ل عمل روم للوق سوي بس روم ب اسم log** ')
 .addField('     ** **  ' ,' ** ** ')
 .addField('**لدعوة البوت لسيرفرك ..**' , '**http://cutt.us/P8eIJ**')
 .addField('     **سيرفر الدعم الفني**  ' ,' **https://discord.gg/Mwyp8d8** ')

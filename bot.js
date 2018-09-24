@@ -2072,7 +2072,7 @@ client.on("guildCreate", guild => {
 
 client.on("message", async message => {
 if(message.channel.type === "dm") return;
- if(message.content === (prefix + "*bottime")) { /// حط اي كلمة تبيها
+ if(message.content === (prefix + "*time")) { /// حط اي كلمة تبيها
  if (!message.channel.guild) return message.reply('**هذا الامر للسيرفرات فقط**');
     let uptime = client.uptime;
 

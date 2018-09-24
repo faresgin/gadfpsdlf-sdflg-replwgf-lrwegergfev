@@ -2070,7 +2070,6 @@ client.on("guildCreate", guild => {
 
 //كود البروفايل
 
-const Discord = require("discord.js"); 
 const bot = new Discord.Client({disableEveryone: true});
 const Canvas = require('canvas') 
 const fs = module.require("fs"); 

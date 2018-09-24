@@ -35,6 +35,7 @@ client.on('message', message => {
 .setThumbnail(message.author.avatarURL)
 .addField('     **اوامر عامه** ' ,' **الاوامر العامه الخاصه ب الزاور** ')
 .addField('     ** **  ' ,' ** ** ')
+.addField('     ** *xo **  ' ,' **امر لعبة اكس او جميل جدا** ')
 .addField('     ** *avatar **  ' ,' **لتجيب صورة احد كل العليك تكتب الامر وتمنشنو** ')
 .addField('     ** *mhelp **  ' ,' **لعرض اوامر كود الاغاني** ')
 .addField('     ** *support **  ' ,' **لسيرفر الدعم الفني** ')
@@ -2054,6 +2055,17 @@ client.on('message' , message => {
   }
 }
  });
+
+
+//لوق دخول وخروج البوت من السيرفرات
+
+client.on("guildCreate", guild => {
+    client.channels.get("493741933299105814").send(' ***  BOT  ***   **Join To**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+    });
+    
+    client.on("guildDelete", guild => {
+    client.channels.get("493741933299105814").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
+    });
 
 
 //none

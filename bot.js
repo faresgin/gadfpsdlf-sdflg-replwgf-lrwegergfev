@@ -946,7 +946,7 @@ client.on('message', async message => { // Alpha Codes Server.
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('nbc')){
+if (message.content.startsWith('*nbc')){
  if(!message.author.id === '') return;
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{

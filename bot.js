@@ -567,7 +567,7 @@ function play(guild, song) {
 
 client.on("message", function(message) {
     if (message.content === "*support") {
-    return message.reply("https://discord.gg/jcp7XP")
+    return message.reply("https://discord.gg/FNqMbzm")
     .catch(console.error);
     }
  

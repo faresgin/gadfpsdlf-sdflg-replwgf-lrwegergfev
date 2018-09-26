@@ -68,7 +68,7 @@ client.on('message', message => {
 .addField('     ** *bot **  ' ,' **لمعرفة البوت بكم ** ')
 .addField('     ** **  ' ,' ** ** ')
 .addField('**لدعوة البوت لسيرفرك ..**' , '**http://cutt.us/P8eIJ**')
-.addField('     **سيرفر الدعم الفني**  ' ,' **https://discord.gg/Mwyp8d8** ')
+.addField('     **سيرفر الدعم الفني**  ' ,' **https://discord.gg/UBDjBem** ')
  
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);
@@ -99,7 +99,7 @@ client.on('message', message => {
 .addField('     ** *ban **  ' ,' **لتبنيد شخص ب السيرفر بس اكتب الامر ومنشنو والسبب** ')
 .addField('     ** **  ' ,' ** ** ')
 .addField('**لدعوة البوت لسيرفرك ..**' , '**http://cutt.us/P8eIJ**')
-.addField('     **سيرفر الدعم الفني**  ' ,' **https://discord.gg/Mwyp8d8** ')
+.addField('     **سيرفر الدعم الفني**  ' ,' **https://discord.gg/UBDjBem** ')
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);
     }
@@ -567,7 +567,7 @@ function play(guild, song) {
 
 client.on("message", function(message) {
     if (message.content === "*support") {
-    return message.reply("https://discord.gg/Mwyp8d8")
+    return message.reply("https://discord.gg/UBDjBem")
     .catch(console.error);
     }
  

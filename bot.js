@@ -47,6 +47,22 @@ client.on('ready', () => {
     }, 30000);
   });
 
+//كود الهيلب المطور الجميل
+
+
+        client.on('message', message => {
+          var prefix = '*';
+          if (message.content.startsWith(prefix + 'help')) {
+      let embed = new Discord.RichEmbed()
+      .addField('*phelp' ,'     :earth_americas:  للحصول على قائمة  الاوامر العامه للزوار:earth_americas: ')
+      .addField('*ahelp' ,'     :crown:   للحصول على قائمة  الاداره :crown:  ')
+      .addField('*mhelp' ,'     :musical_note:   للحصول على قائمة  الموسيقى :musical_note:  ')
+      .setColor('RANDOM')
+      .setTitle('═════ஜ۩۞۩ஜ══════════ஜ۩۞۩ஜ═════')
+      message.channel.send(embed)
+      }
+  });
+
 //كود الانفيت بشكل جميل 
 
 client.on('message' , message => {

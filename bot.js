@@ -27,8 +27,25 @@ client.on('ready', () => {
   console.log('')
 });
 
-/
 
+
+//nn
+
+ client.on("ready", async  => {
+  setInterval(function(){
+  client.channels.find('id', '494557396656455730').setName("【");
+  client.channels.find('id', '494557396656455730').setName("【m");
+  client.channels.find('id', '494557396656455730').setName("【ma");
+  client.channels.find('id', '494557396656455730').setName("【mai");
+  client.channels.find('id', '494557396656455730').setName("【main");
+  client.channels.find('id', '494557396656455730').setName("【main-");
+  client.channels.find('id', '494557396656455730').setName("【main-c");
+  client.channels.find('id', '494557396656455730').setName("【main-ch");
+  client.channels.find('id', '494557396656455730').setName("【main-cha");
+  client.channels.find('id', '494557396656455730').setName("【main-chat】");
+
+    }, 10000);
+  });
 
 //كود الانفيت بشكل جميل 
 
@@ -44,24 +61,6 @@ client.on('message' , message => {
  **
 رابط البوت |
 http://cutt.us/gmzninv
- **
-`);
-  message.author.sendEmbed(embed);
-   }
-});
-//كود السبورت مطور ب شكل جميل
-
-client.on('message' , message => {
-
-    if (message.content === "*support") {
-	    message.reply(`تم ارساله الرابط في الخاص`)
-        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
-     const embed = new Discord.RichEmbed()
- .setColor("RANDOM")
- .setThumbnail(client.user.avatarURL)     
- .setDescription(" ***welcome To server support*** " + `
- **
-رابط السيرفر | https://discord.gg/FNqMbzm
  **
 `);
   message.author.sendEmbed(embed);

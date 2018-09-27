@@ -26,6 +26,10 @@ client.on('ready', () => {
   console.log('')
   console.log('')
 });
+
+/
+
+
 //كود الانفيت بشكل جميل 
 
 client.on('message' , message => {
@@ -45,19 +49,37 @@ http://cutt.us/gmzninv
   message.author.sendEmbed(embed);
    }
 });
+//كود السبورت مطور ب شكل جميل
+
+client.on('message' , message => {
+
+    if (message.content === "*support") {
+	    message.reply(`تم ارساله الرابط في الخاص`)
+        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)     
+ .setDescription(" ***welcome To server support*** " + `
+ **
+رابط السيرفر | https://discord.gg/FNqMbzm
+ **
+`);
+  message.author.sendEmbed(embed);
+   }
+});
 
 //كود اليخلي الروم ينكتب واحده واحده
 
 client.on("ready", async  => {
   setInterval(function(){
-  client.channels.find('id', '494557396656455730').setName("ر");
-  client.channels.find('id', '494557396656455730').setName("رو");
-  client.channels.find('id', '494557396656455730').setName("روم");
-  client.channels.find('id', '494557396656455730').setName("؏ روم ");
-  client.channels.find('id', '494557396656455730').setName("روم ּ؏ــٰ");
-  client.channels.find('id', '494557396656455730').setName("روم ּ؏ــٰا̍");
-  client.channels.find('id', '494557396656455730').setName("روم ּ؏ــٰا̍م");
-    }, 10000);
+  client.channels.find('id', '494557396656455730').setName("【");
+  client.channels.find('id', '494557396656455730').setName("ma");
+  client.channels.find('id', '494557396656455730').setName("in-");
+  client.channels.find('id', '494557396656455730').setName("chat");
+  client.channels.find('id', '494557396656455730').setName("chat】");
+  client.channels.find('id', '494557396656455730').setName("【main-chat】");
+  client.channels.find('id', '494557396656455730').setName("【main-chat】");
+    }, 20000);
   });
 //كود اليغير الحال حقت البوت كل شوي بس بلاينج
 
@@ -605,15 +627,6 @@ client.on("message", function(message) {
  
 });
 
-//كود الانفيت لاضافة البوت
-
-client.on("message", function(message) {
-    if (message.content === "*inv") {
-    return message.reply("http://cutt.us/P8eIJ ~ اضغط علي الرابط لأضافة البوت")
-    .catch(console.error);
-    }
- 
-});
 
 //كود الايدي الهو المعلومات الشخصيه
 

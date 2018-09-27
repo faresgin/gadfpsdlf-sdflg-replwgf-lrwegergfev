@@ -27,9 +27,27 @@ client.on('ready', () => {
   console.log('')
 });
 
+//كود السبورت
 
+client.on('message' , message => {
 
-//nn
+    if (message.content === "*support") {
+	    message.reply(`تم ارساله الرابط في الخاص`) 
+        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)     
+ .setDescription("الدعم الفني" + `
+ **
+سيرفر الدعم الفني |
+https://discord.gg/FNqMbzm
+ **
+`);
+  message.author.sendEmbed(embed);
+   }
+});
+
+//ىى
 
  client.on("ready", async  => {
   setInterval(function(){
@@ -107,27 +125,36 @@ client.on('ready', function(){
 
 });
 
+//كود هيلب الجيمز
+
+client.on('message', message => {
+     if (message.content === "*ghelp") {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **اوامر الالعاب** ' ,' **الاوامر العامه للالعاب** ')
+.addField('     ** **  ' ,' ** ** ')
+.addField('     ** *xo **  ' ,' **امر لعبة اكس او جميل جدا** ')
+.addField('     ** **  ' ,' ** ** ')
+.setColor('RANDOM')
+  message.channel.sendEmbed(embed);
+    }
+});
+
 //none
 
 client.on('message', message => {
-     if (message.content === "*help") {
+     if (message.content === "*phelp") {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     **اوامر عامه** ' ,' **الاوامر العامه الخاصه ب الزاور** ')
 .addField('     ** **  ' ,' ** ** ')
-.addField('     ** *xo **  ' ,' **امر لعبة اكس او جميل جدا** ')
 .addField('     ** *avatar **  ' ,' **لتجيب صورة احد كل العليك تكتب الامر وتمنشنو** ')
-.addField('     ** *mhelp **  ' ,' **لعرض اوامر كود الاغاني** ')
 .addField('     ** *support **  ' ,' **لسيرفر الدعم الفني** ')
 .addField('     ** *inv **  ' ,' **لدعوة البوت لسيرفرك** ')
 .addField('     ** *id **  ' ,' **لمعرفة معلوماتك الخاصه** ')
 .addField('     ** *server ** ' ,' **لمعرفة معلومات السيرفر**')
 .addField('     ** *ping **  ' ,' **لمعرفة سرعة البوت**')
-.addField('     ** *bot **  ' ,' **لمعرفة البوت بكم ** ')
-.addField('     ** **  ' ,' ** ** ')
-.addField('**لدعوة البوت لسيرفرك ..**' , '**http://cutt.us/P8eIJ**')
-.addField('     **سيرفر الدعم الفني**  ' ,' **https://discord.gg/UBDjBem** ')
- 
+.addField('     ** **  ' ,' ** ** ') 
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);
     }
@@ -137,7 +164,7 @@ client.on('message', message => {
 //الهيلب حق الاداره
  
 client.on('message', message => {
-     if (message.content === "*help") {
+     if (message.content === "*ahelp") {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .addField('     **اوامر اداريه** ' ,' **الاومر الخاصه ب الادمنيه** ')
@@ -156,8 +183,6 @@ client.on('message', message => {
 .addField('     ** *kick **  ' ,' **لطرد احد من السيرفر اكتب الامر ومنشنو** ')
 .addField('     ** *ban **  ' ,' **لتبنيد شخص ب السيرفر بس اكتب الامر ومنشنو والسبب** ')
 .addField('     ** **  ' ,' ** ** ')
-.addField('**لدعوة البوت لسيرفرك ..**' , '**http://cutt.us/P8eIJ**')
-.addField('     **سيرفر الدعم الفني**  ' ,' **https://discord.gg/UBDjBem** ')
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);
     }

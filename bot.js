@@ -44,7 +44,7 @@ client.on('ready', () => {
   client.channels.find('id', '494557396656455730').setName("【main-cha");
   client.channels.find('id', '494557396656455730').setName("【main-chat】");
 
-    }, 10000);
+    }, 30000);
   });
 
 //كود الانفيت بشكل جميل 

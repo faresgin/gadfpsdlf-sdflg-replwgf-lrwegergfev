@@ -29,25 +29,25 @@ client.on('ready', () => {
 
 //كود اليغير الحال حقت البوت كل شوي بس بلاينج
 
-//client.on('ready', function(){
-    //var ms = 1000;
-    //var setGame = [`*help || inv`,'http://cutt.us/GMZNbot','By: Ahmed Magdi','*help || *inv'];
-    //var i = -1;
-    //var j = 0;
-    //setInterval(function (){
-        //if( i == -1 ){
-            //j = 1;
-        //}
-        //if( i == (setGame.length)-1 ){
-            //j = -1;
-        //}
-        //i = i+j;
-        //client.user.setGame(setGame[i]);
-    //}, ms);1000
+client.on('ready', function(){
+    var ms = 1000;
+    var setGame = [`*help || inv`,'http://cutt.us/GMZNbot','By: Ahmed Magdi','*help || *inv'];
+    var i = -1;
+    var j = 0;
+    setInterval(function (){
+        if( i == -1 ){
+            j = 1;
+        }
+        if( i == (setGame.length)-1 ){
+            j = -1;
+        }
+        i = i+j;
+        client.user.setGame(setGame[i]);
+    }, ms);1000
 
 
 
-//});
+});
 
 //none
 

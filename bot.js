@@ -54,9 +54,11 @@ client.on('ready', () => {
           var prefix = '*';
           if (message.content.startsWith(prefix + 'help')) {
       let embed = new Discord.RichEmbed()
+      .setTitle('═════ஜ۩۞۩ஜ══════════ஜ۩۞۩ஜ═════')
       .addField('*phelp' ,'     :earth_americas:  للحصول على قائمة  الاوامر العامه للزوار:earth_americas: ')
       .addField('*ahelp' ,'     :crown:   للحصول على قائمة  الاداره :crown:  ')
       .addField('*mhelp' ,'     :musical_note:   للحصول على قائمة  الموسيقى :musical_note:  ')
+      .addField('*ghelp' ,'     :desktop:    للحصول على قائمة  الالعاب :desktop:  ')
       .setColor('RANDOM')
       .setTitle('═════ஜ۩۞۩ஜ══════════ஜ۩۞۩ஜ═════')
       message.channel.send(embed)

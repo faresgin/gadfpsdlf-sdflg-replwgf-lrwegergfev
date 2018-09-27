@@ -47,6 +47,34 @@ https://discord.gg/FNqMbzm
    }
 });
 
+//nnn
+
+//【bots-commands】ىى
+
+ client.on("ready", async  => {
+  setInterval(function(){
+  client.channels.find('id', '494557724160294922').setName("【");
+  client.channels.find('id', '494557724160294922').setName("【b");
+  client.channels.find('id', '494557724160294922').setName("【bo");
+  client.channels.find('id', '494557724160294922').setName("【bot");
+  client.channels.find('id', '494557724160294922').setName("【bots");
+  client.channels.find('id', '494557724160294922').setName("【bots-");
+  client.channels.find('id', '494557724160294922').setName("【bots-c");
+  client.channels.find('id', '494557724160294922').setName("【bots-co");
+  client.channels.find('id', '494557724160294922').setName("【bots-com");
+  client.channels.find('id', '494557724160294922').setName("【bots-comm");
+  client.channels.find('id', '494557724160294922').setName("【bots-comma");
+  client.channels.find('id', '494557724160294922').setName("【bots-comman");
+  client.channels.find('id', '494557724160294922').setName("【bots-command");
+  client.channels.find('id', '494557724160294922').setName("【bots-commands");
+  client.channels.find('id', '494557724160294922').setName("【bots-commands】");
+  client.channels.find('id', '494557724160294922').setName("");
+
+
+    }, 50000);
+  });
+
+
 //ىى
 
  client.on("ready", async  => {

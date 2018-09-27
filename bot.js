@@ -31,7 +31,7 @@ client.on('ready', () => {
 
 client.on('ready', function(){
     var ms = 1000;
-    var setGame = [`*help || inv`,'http://cutt.us/GMZNbot','By: Ahmed Magdi','*help || *inv'];
+    var setGame = [`*help || inv`,'*help || inv','*help || inv','By: Ahmed Magdi','البوت منور بكم يا اساطير'];
     var i = -1;
     var j = 0;
     setInterval(function (){

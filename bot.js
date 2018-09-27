@@ -43,7 +43,7 @@ client.on('ready', function(){
         }
         i = i+j;
         client.user.setGame(setGame[i]);
-    }, ms);1000
+    }, ms);2000
 
 
 

@@ -112,7 +112,6 @@ https://discord.gg/FNqMbzm
   });
 //كود يثبت البوت ب روم
 
-const Discord = require("discord.js")
 const client = new Discord.Client();
 const YTDL = require('ytdl-core');
 const nodeopus = require('node-opus');

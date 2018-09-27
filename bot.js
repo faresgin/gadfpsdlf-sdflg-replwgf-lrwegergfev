@@ -26,6 +26,25 @@ client.on('ready', () => {
   console.log('')
   console.log('')
 });
+//كود الانفيت بشكل جميل 
+
+client.on('message' , message => {
+
+    if (message.content === "*inv") {
+	    message.reply(`تم ارساله الرابط في الخاص`) 
+        if(!message.channel.guild) return message.reply('**الآمر فقط في السيرفرات**');
+     const embed = new Discord.RichEmbed()
+ .setColor("RANDOM")
+ .setThumbnail(client.user.avatarURL)     
+ .setDescription("Add me" + `
+ **
+رابط البوت |
+http://cutt.us/gmzninv
+ **
+`);
+  message.author.sendEmbed(embed);
+   }
+});
 
 //كود اليخلي الروم ينكتب واحده واحده
 

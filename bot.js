@@ -68,19 +68,6 @@ client.on('message' , message => {
    }
 });
 
-//كود اليخلي الروم ينكتب واحده واحده
-
-client.on("ready", async  => {
-  setInterval(function(){
-  client.channels.find('id', '494557396656455730').setName("【");
-  client.channels.find('id', '494557396656455730').setName("ma");
-  client.channels.find('id', '494557396656455730').setName("in-");
-  client.channels.find('id', '494557396656455730').setName("chat");
-  client.channels.find('id', '494557396656455730').setName("chat】");
-  client.channels.find('id', '494557396656455730').setName("【main-chat】");
-  client.channels.find('id', '494557396656455730').setName("【main-chat】");
-    }, 20000);
-  });
 //كود اليغير الحال حقت البوت كل شوي بس بلاينج
 
 client.on('ready', function(){

@@ -172,27 +172,7 @@ client.on('message', message => {
 });
 //nnnn
 
-client.on("message", message => {
-	var prefix = "*";
- if (message.content === "*phelp") {
-	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      .setDescription(`
-      ❋─────❋ اوامر عامة ❋─────❋
-*avatar ~ لعرض صورتك او صورة حد تمنشنو
-*server ~يعرض لك معلومات عن السيرفر
-*bot ~ يعرض لك معلومات البوت
-*support ~ يرسل لك رابط الدعم الفني ب الخاص
-*inv ~ يرسل لك رابط اضافة البوت خاص
-*id ~ يجيب لك معلومات حسابك
-*ping ~ لمعرفة سرعة البوت
-*bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر
-`)
-   message.author.sendEmbed(embed)
-    
-   }
-   }); 
+
 
 //عدد الاشخاص المبنده
 
@@ -218,6 +198,7 @@ client.on('message', message => {
 .addField('     ** *id **  ' ,' **لمعرفة معلوماتك الخاصه** ')
 .addField('     ** *server ** ' ,' **لمعرفة معلومات السيرفر**')
 .addField('     ** *ping **  ' ,' **لمعرفة سرعة البوت**')
+.addField('     ** *bans **  ' ,' **يجيب لك عدد الاشخاص المبنده في السيرفر** ') 
 .addField('     ** **  ' ,' ** ** ') 
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);

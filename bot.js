@@ -76,9 +76,7 @@ https://discord.gg/FNqMbzm
   client.channels.find('id', '494557724160294922').setName("【bots-comman");
   client.channels.find('id', '494557724160294922').setName("【bots-command");
   client.channels.find('id', '494557724160294922').setName("【bots-commands");
-  client.channels.find('id', '494557724160294922').setName("【bots-commands】");
-  client.channels.find('id', '494557724160294922').setName("");
- 
+  client.channels.find('id', '494557724160294922').setName("【bots-commands】"); 
  
     }, 50000);
   });

@@ -115,7 +115,7 @@ https://discord.gg/FNqMbzm
 
 
 //كود الانفيت بشكل جميل 
-e
+
 client.on('message' , message => {
 
     if (message.content === "*inv") {
@@ -158,59 +158,18 @@ http://cutt.us/gmzninv
 
 //كود هيلب الجيمز
 
-client.on("message", message => {
-	var prefix = "*";
- if (message.content === "*ghelp") {
-	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      .setDescription(`
-      **❋─────❋ اوامر الالعاب ❋─────❋**
-
-** *xo ~ كود لعبة اكس او**
-`)
-   message.author.sendEmbed(embed)
-    
-   }
-   }); 
-
-//nnnn
-
-
-
-//عدد الاشخاص المبنده
-
 client.on('message', message => {
-    if (message.content.startsWith("*bans")) {
-        message.guild.fetchBans()
-        .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
-  .catch(console.error);
-}
+     if (message.content === "*ghelp") {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     **اوامر الالعاب** ' ,' **الاوامر العامه للالعاب** ')
+.addField('     ** **  ' ,' ** ** ')
+.addField('     ** *xo **  ' ,' **امر لعبة اكس او جميل جدا** ')
+.addField('     ** **  ' ,' ** ** ')
+.setColor('RANDOM')
+  message.channel.sendEmbed(embed);
+    }
 });
-
-//nnn
-
-client.on("message", message => {
-	var prefix = "*";
- if (message.content === "*phelp") {
-	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      .setDescription(`
-      **❋─────❋ اوامر عامة ❋─────❋**
-** *avatar ~ لعرض صورتك او صورة حد تمنشنو**
-** *server ~يعرض لك معلومات عن السيرفر**
-** *bot ~ يعرض لك معلومات البوت**
-** *support ~ يرسل لك رابط الدعم الفني ب الخاص**
-** *inv ~ يرسل لك رابط اضافة البوت خاص**
-** *id ~ يجيب لك معلومات حسابك**
-** *ping ~ لمعرفة سرعة البوت**
-** *bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر**
-`)
-   message.author.sendEmbed(embed)
-    
-   }
-   }); 
 
 //none
 
@@ -226,7 +185,6 @@ client.on('message', message => {
 .addField('     ** *id **  ' ,' **لمعرفة معلوماتك الخاصه** ')
 .addField('     ** *server ** ' ,' **لمعرفة معلومات السيرفر**')
 .addField('     ** *ping **  ' ,' **لمعرفة سرعة البوت**')
-.addField('     ** *bans **  ' ,' **يجيب لك عدد الاشخاص المبنده في السيرفر** ') 
 .addField('     ** **  ' ,' ** ** ') 
 .setColor('RANDOM')
   message.channel.sendEmbed(embed);
@@ -236,34 +194,6 @@ client.on('message', message => {
  
 //الهيلب حق الاداره
  
-client.on("message", message => {
-	var prefix = "*";
- if (message.content === "*ahelp") {
-	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed() 
-      .setColor("RANDOM")
-      .setDescription(`
-      **❋─────❋ اوامر اداريه ❋─────❋**
-** *uchat ~ ل فك تقفيل الشات**
-** *cchat ~ ل تقفيل الشات**
-** *umute ~ لفك الميوت الكتابي**
-** *mute ~ لعمل ميوت كتابي لحد**
-** *send ~ ل عمل تصويت ب روم محدد**
-** *nbc ~ ل ارسال رساله لاعضاء السيرفر  بس غير مطور فقط الكلام**
-** *bc ~ لعمل برودكاست لأعضاء السيرفر**
-** *ban ~ ل تبنيد احد من السيرفر**
-** log ~ لعمل روم مخصص ل لوق السيرفر سوي روم ب ده الاسم**
-** *kick ~ ل طرد احد من السيرفر**
-** *role ~ ل اعطاء احد رتبه**
-** Welcome ~ لعمل ترحيب ب روم مخصص سوي روم ب الاسم ده**
-`)
-   message.author.sendEmbed(embed)
-    
-   }
-   }); 
-
-
-
 client.on('message', message => {
      if (message.content === "*ahelp") {
      let embed = new Discord.RichEmbed()
@@ -274,8 +204,8 @@ client.on('message', message => {
 .addField('     ** *bc **  ' ,' **ل ارسال رساله لاعضاء السيرفر بشكل جميل ومطور** ')
 .addField('     ** *nbc **  ' ,' **ل ارسال رساله لاعضاء السيرفر  بس غير مطور فقط الكلام** ')
 .addField('     ** *send **  ' ,' **ل عمل تصويت ب روم ** ')
-.addField('     ** *mute ** ' ,' **لعمل ميوت كتابي لحد** ')
-.addField('     ** *unmute ** ~ **لفك الميوت الكتابي** ')
+.addField('     ** *mute **  ' ,' **لعمل ميوت كتابي لحد** ')
+.addField('     ** *unmute ** ' ,' **لفك الميوت الكتابي** ')
 .addField('     ** *cchat **  ' ,' **لتقفيل الشات ما احد يقدر يكتب به** ')
 .addField('     ** *uchat **  ' ,' **لفتح الشات تاني** ')
 .addField('     ** Welcom **  ' ,' **لعمل ترحيب ل شخص دخل جديد ب السيرفر سوي روم اسمو Welcome** ')
@@ -308,11 +238,14 @@ client.on('message', message => {
         .setTitle('Click Here')
         .setURL(`${omar.avatarURL}`)
         .setImage(`${omar.avatarURL}`)
-        .setFooter('✽ GMZN Community ✽',client.user.avatarURL) 
+        .setFooter('name bot',client.user.avatarURL) 
       message.channel.sendEmbed(embed);
     }
 });
 
+//نهاية كود الافتار
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //كود الموسيقي
 
@@ -747,6 +680,9 @@ function play(guild, song) {
 }
 });
 
+//نهاية كود الميوزك
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //كود الايدي الهو المعلومات الشخصيه
 
@@ -803,6 +739,10 @@ message.channel.send({embed});
  
 });
 
+//نهاية كود الايدي
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 //كود معلومات السيرفر
   
 client.on('message', function(msg) {
@@ -825,6 +765,10 @@ client.on('message', function(msg) {
     }
   });
 
+//نهاية كود معلومات السيرفر
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 //كود البينج الهو سرعة البوت
 
 client.on('message', message => {
@@ -844,6 +788,10 @@ client.on('message', message => {
                         }
                     });
 
+//نهاية كود البينج
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 //كود معلومات البوت
 
 client.on('message', function(message) {
@@ -855,11 +803,15 @@ client.on('message', function(message) {
 .addField('**:crown: Servers**','**[ '+client.guilds.size+' ]**',true)
 .addField('**:bust_in_silhouette: Users**','**[ '+client.users.size+' ]**',true)
 .addField('**:earth_africa: Room**','**[ '+client.channels.size+' ]**',true)
-.setFooter('✽ GMZN Community ✽',`${client.user.avatarURL}`)
+.setFooter('name  bot',`${client.user.avatarURL}`)
 .setTimestamp()
 message.channel.send({embed:alpha});
 }
 });
+
+//نهاية كود معلومات البوت
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //بعض الاكواد الاداريه اولهم كود مسح الشات
 
@@ -903,6 +855,10 @@ msg.delete();
 })
 }
 });
+
+//نهاية كود مسح الشات
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //ثاني كود معنا هوا البرودكاست البشكل جميل
 
@@ -1136,6 +1092,9 @@ client.on('message', async message => { // Alpha Codes Server.
     }
 });
  
+//نهاية كود البرودكاست المطور الجميل
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //كود البرودكاست البدون اي شي فقط الكلام
  
@@ -1150,6 +1109,8 @@ m.sendMessage(args)
 })
 }
 });
+
+//نهاية كود البرودكاست بدون اي شي
 
 //كود تغير البلاينج و الصوره والاسم
 
@@ -1169,6 +1130,10 @@ if (message.content.startsWith(adminprefix + 'tw')) {
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
 });
+
+//نهاية كود تغير البلاينج و الصوره والاسم
+
+
 
 //كود تقفيل الشات وفتحو
 
@@ -1200,6 +1165,10 @@ if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('لي�
  
  
 });
+
+//نهاية كود  قفل وفتح الروم
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //كود امر عمل تصويت من البوت في روم مخصص
 
@@ -1239,6 +1208,10 @@ suggestchannel.send("@everyone || @here ");
     return;
 }
 });
+
+//نهاية كود عمل تصويت ب روم محدد
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //كود الميوت وفك الميوت
 
@@ -1310,6 +1283,9 @@ var unmuteembeddm = new Discord.RichEmbed()
 }
 });
  
+//نهاية كود الميوت وفك الميوت
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //كود الترحيب ب صوره
 
@@ -1331,6 +1307,10 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     channel.send({embed : embed});
     });
 
+//نههاية كود الترحيب
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 //كود اعطاء رتبه الهو الرول
 
 client.on('message', async message => {
@@ -1347,7 +1327,7 @@ client.on('message', async message => {
         if(!message.guild.member(client.user).hasPermission('MANAGE_ROLES')) return message.channel.send(':no_entry: | I dont have **MANAGE_ROLES** Permission!');
         if(!message.guild.member(client.user).hasPermission('EMBED_LINKS')) return message.channel.send(':no_entry: | I dont have **EMBED_LINKS** Permission!');
  
-        let roleCommand = new Discord.RichEmbed() // حقوق الفا كودز
+        let roleCommand = new Discord.RichEmbed() 
         .setTitle(':white_check_mark: Role Command.')
         .setColor('GREEN')
         .setDescription(`**\n${prefix}role <SOMEONE> <ROLE>**\n➥ \`\`For give or delete from some one the role.\`\`\n\n**${prefix}role humans add <ROLE>**\n➥ \`\`For give the humans role.\`\`\n\n**${prefix}role humans remove <ROLE>**\n➥ \`\`For delete from the humans role.\`\`\n\n**${prefix}role bots add <ROLE>**\n➥ \`\`For give the bots role.\`\`\n\n**${prefix}role bots remove <ROLE>**\n➥ \`\`For delete from the bots role.\`\`\n\n**${prefix}role all add <ROLE>**\n➥ \`\`For give all role.\`\`\n\n**${prefix}role all remove <ROLE>**\n➥ \`\`For remove from all role.\`\``)
@@ -1380,7 +1360,7 @@ client.on('message', async message => {
           }
       }else if(args[1] === 'humans') {
           let notArgs = new Discord.RichEmbed()
-          .setTitle(':white_check_mark: Role Command.') // حقوق الفا كودز
+          .setTitle(':white_check_mark: Role Command.') 
           .setColor('GREEN')
           .setDescription(`**\n${prefix}role humans add <ROLE>**\n➥ \`\`For give the humans the role.\`\`\n\n**${prefix}role humans remove <ROLE>**\n➥ \`\`For delete the role from all humans.\`\``)
           .setTimestamp()
@@ -1414,7 +1394,7 @@ client.on('message', async message => {
                       msg.delete();
                       message.channel.send(`:timer: | Now you must wait some time to give **${message.guild.members.filter(m => !message.guild.member(m).roles.has(getRole.id) && !m.user.bot).size}** Humans the role **${getRole.name}** ...`).then(message1 => {
                           message.guild.members.filter(m => !message.guild.member(m).roles.has(getRole.id) && !m.user.bot).forEach(async m => {
-                              message.guild.member(m).addRole(getRole.id) // حقوق الفا كودز
+                              message.guild.member(m).addRole(getRole.id) 
                               await message1.edit(`:white_check_mark: | <@${message.author.id}> Successfully give all **Humans** The role **${getRole.name}** .`);
                           });
                       });
@@ -1430,7 +1410,7 @@ client.on('message', async message => {
  
               let humansSure = new Discord.RichEmbed()
               .setTitle(`:red_circle: Are you sure to remove **${getRole.name}** from **${message.guild.members.filter(m => message.guild.member(m).roles.has(getRole.id) && !m.user.bot).size}** Humans?`)
-              .setColor('RED') // حقوق الفا كودز
+              .setColor('RED') 
               .setDescription('**\nYou have 1 min to choose reaction you want.**\n\n✅ = Sure, remove the role from him.\n\n❎ = No no, cancel.')
               .setTimestamp()
               .setFooter(message.author.tag, message.author.avatarURL)
@@ -1450,7 +1430,7 @@ client.on('message', async message => {
                               message.guild.member(m).removeRole(getRole.id)
                               await message1.edit(`:white_check_mark: | <@${message.author.id}> Successfully remove the role **${getRole.name}** From all **Humans** .`);
                           });
-                      }); // حقوق الفا كودز
+                      }); 
                   });
                   dontRemove.on('collect', r => {
                       msg.delete();
@@ -1467,7 +1447,7 @@ client.on('message', async message => {
           .setFooter(message.author.tag, message.author.avatarURL)
  
           if(!args[2]) return message.channel.send(notArgs);
-          if(!args[3]) return message.channel.send(notArgs); // حقوق الفا كودز
+          if(!args[3]) return message.channel.send(notArgs); 
           if(!getRole) return message.channel.send(':no_entry: | I couldn\'t find the role!');
             if(getRole.name === '@everyone') return message.channel.send(':no_entry: | I couldn\'t find the role!');
  
@@ -1488,7 +1468,7 @@ client.on('message', async message => {
                   let giveHim = (reaction, user) => reaction.emoji.name === '✅'  && user.id === message.author.id;
                   let dontGiveHim = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
                   let give = msg.createReactionCollector(giveHim, { time: 60000 });
-                  let dontGive = msg.createReactionCollector(dontGiveHim, { time: 60000 }); // حقوق الفا كودز
+                  let dontGive = msg.createReactionCollector(dontGiveHim, { time: 60000 });
  
                   give.on('collect', r => {
                       msg.delete();
@@ -1502,7 +1482,7 @@ client.on('message', async message => {
                   dontGive.on('collect', r => {
                       msg.delete();
                       message.channel.send(':negative_squared_cross_mark: | The command has been canceld.').then(msg => msg.delete(5000));
-                  }); // حقوق الفا كودز
+                  }); 
               })
           }else if(args[2] === 'remove') {
               if(getRole.position >= message.guild.member(client.user).highestRole.position) return message.channel.send(`:no_entry: | I can\'t \`\`REMOVE\`\` The role with name **${getRole.name}** From any Bot beacuse the role highest then my role!`);
@@ -1516,7 +1496,7 @@ client.on('message', async message => {
               .setFooter(message.author.tag, message.author.avatarURL)
  
               message.channel.send(humansSure).then(msg => {
-                  msg.react('✅').then(() => msg.react('❎')) // حقوق الفا كودز
+                  msg.react('✅').then(() => msg.react('❎')) 
  
                   let removeRole = (reaction, user) => reaction.emoji.name === '✅'  && user.id === message.author.id;
                   let dontRemoveRole = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
@@ -1532,7 +1512,7 @@ client.on('message', async message => {
                           });
                       });
                   });
-                  dontRemove.on('collect', r => { // حقوق الفا كودز
+                  dontRemove.on('collect', r => { 
                       msg.delete();
                       message.channel.send(':negative_squared_cross_mark: | The command has been canceld.').then(msg => msg.delete(5000));
                   });
@@ -1541,7 +1521,7 @@ client.on('message', async message => {
       }else if(args[1] === 'all') {
           let notArgs = new Discord.RichEmbed()
           .setTitle(':white_check_mark: Role Command.')
-          .setColor('GREEN') // حقوق الفا كودز
+          .setColor('GREEN') 
           .setDescription(`**\n${prefix}role all add <ROLE>**\n➥ \`\`For give all the role.\`\`\n\n**${prefix}role all remove <ROLE>**\n➥ \`\`For delete the role from all.\`\``)
           .setTimestamp()
           .setFooter(message.author.tag, message.author.avatarURL)
@@ -1596,7 +1576,7 @@ client.on('message', async message => {
               .setFooter(message.author.tag, message.author.avatarURL)
  
               message.channel.send(allSure).then(msg => {
-                  msg.react('✅').then(() => msg.react('❎')) // حقوق الفا كودز
+                  msg.react('✅').then(() => msg.react('❎')) 
  
                   let removeRole = (reaction, user) => reaction.emoji.name === '✅'  && user.id === message.author.id;
                   let dontRemoveRole = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
@@ -1610,17 +1590,21 @@ client.on('message', async message => {
                               message.guild.member(m).removeRole(getRole.id);
                               await message1.edit(`:white_check_mark: | <@${message.author.id}> Successfully remove the role **${getRole.name}** From **All** .`);
                           });
-                      }); // حقوق الفا كودز
+                      });   
                   });
                   dontRemove.on('collect', r => {
                       msg.delete();
                       message.channel.send(':negative_squared_cross_mark: | The command has been canceld.').then(msg => msg.delete(5000));
                   });
               })
-          } // حقوق الفا كودز
+          }  
       }
-  } // حقوق الفا كودز
+  } 
 });
+
+//نهاية كود اعطاء الرتبه الهو رول
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //كود الوق ما عليك انك تسوي روم اسمو (log)
 
@@ -2170,6 +2154,10 @@ client.on('voiceStateUpdate', (voiceOld, voiceNew) => {
     }
 });
 
+//نهاية كود الوق حق السيرفر
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 //كود لما تمنشن البوت يرد عليكي
 
 client.on('message', message=> {
@@ -2179,6 +2167,11 @@ client.on('message', message=> {
     message.reply("هلا امرني اذا تبي مساعده اكتب *help");
     }
 });
+
+//نهاية كود لما تمنشن البوت يرد عليك
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 //لعبة اكس او
 
 client.on('message' , message => {
@@ -2246,6 +2239,9 @@ client.on('message' , message => {
 }
  });
 
+//نهاية كود لعبة اكس او
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //لوق دخول وخروج البوت من السيرفرات
 
@@ -2257,6 +2253,9 @@ client.on("guildCreate", guild => {
     client.channels.get("494580419958931497").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
     });
 
+//نهاية كود الوق حق خروج ودخول البوت من السيرفر
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 //كود الكيك والبان
 
@@ -2329,8 +2328,38 @@ if (message.mentions.users.size < 1) return message.reply("**منشن الشخص
   })
 }
 });
+//نهاية كود الكيك والبان
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+//كود الهيلب علي الخاص بشكل جميل وصغير
+
+client.on("message", message => {
+	var prefix = "*";
+ if (message.content === "*phelp") {
+	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
+      **❋─────❋ اوامر عامة ❋─────❋**
+** *avatar ~ لعرض صورتك او صورة حد تمنشنو**
+** *server ~يعرض لك معلومات عن السيرفر**
+** *bot ~ يعرض لك معلومات البوت**
+** *support ~ يرسل لك رابط الدعم الفني ب الخاص**
+** *inv ~ يرسل لك رابط اضافة البوت خاص**
+** *id ~ يجيب لك معلومات حسابك**
+** *ping ~ لمعرفة سرعة البوت**
+** *bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر**
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+
+//نهاية كود الهيلب علي الخاص بشكل جميل وصغير
+
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-//none
 
 client.login(process.env.BOT_TOKEN);

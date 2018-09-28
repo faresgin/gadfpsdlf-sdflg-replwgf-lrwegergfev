@@ -238,7 +238,7 @@ client.on('message', message => {
         .setTitle('Click Here')
         .setURL(`${omar.avatarURL}`)
         .setImage(`${omar.avatarURL}`)
-        .setFooter('name bot',client.user.avatarURL) 
+        .setFooter('✽ GMZN Community ✽',client.user.avatarURL) 
       message.channel.sendEmbed(embed);
     }
 });
@@ -785,7 +785,7 @@ client.on('message', function(message) {
 .addField('**:crown: Servers**','**[ '+client.guilds.size+' ]**',true)
 .addField('**:bust_in_silhouette: Users**','**[ '+client.users.size+' ]**',true)
 .addField('**:earth_africa: Room**','**[ '+client.channels.size+' ]**',true)
-.setFooter('name  bot',`${client.user.avatarURL}`)
+.setFooter('✽ GMZN Community ✽',`${client.user.avatarURL}`)
 .setTimestamp()
 message.channel.send({embed:alpha});
 }

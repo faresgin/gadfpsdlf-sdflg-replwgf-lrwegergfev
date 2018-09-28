@@ -115,7 +115,7 @@ https://discord.gg/FNqMbzm
 
 
 //كود الانفيت بشكل جميل 
-
+e
 client.on('message' , message => {
 
     if (message.content === "*inv") {
@@ -158,18 +158,22 @@ http://cutt.us/gmzninv
 
 //كود هيلب الجيمز
 
-client.on('message', message => {
-     if (message.content === "*ghelp") {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('     **اوامر الالعاب** ' ,' **الاوامر العامه للالعاب** ')
-.addField('     ** **  ' ,' ** ** ')
-.addField('     ** *xo **  ' ,' **امر لعبة اكس او جميل جدا** ')
-.addField('     ** **  ' ,' ** ** ')
-.setColor('RANDOM')
-  message.channel.sendEmbed(embed);
-    }
-});
+client.on("message", message => {
+	var prefix = "*";
+ if (message.content === "*ghelp") {
+	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
+      **❋─────❋ اوامر الالعاب ❋─────❋**
+
+** *xo ~ كود لعبة اكس او**
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+
 //nnnn
 
 
@@ -232,6 +236,34 @@ client.on('message', message => {
  
 //الهيلب حق الاداره
  
+client.on("message", message => {
+	var prefix = "*";
+ if (message.content === "*ahelp") {
+	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
+      **❋─────❋ اوامر اداريه ❋─────❋**
+** *uchat ~ ل فك تقفيل الشات**
+** *cchat ~ ل تقفيل الشات**
+** *umute ~ لفك الميوت الكتابي**
+** *mute ~ لعمل ميوت كتابي لحد**
+** *send ~ ل عمل تصويت ب روم محدد**
+** *nbc ~ ل ارسال رساله لاعضاء السيرفر  بس غير مطور فقط الكلام**
+** *bc ~ لعمل برودكاست لأعضاء السيرفر**
+** *ban ~ ل تبنيد احد من السيرفر**
+** log ~ لعمل روم مخصص ل لوق السيرفر سوي روم ب ده الاسم**
+** *kick ~ ل طرد احد من السيرفر**
+** *role ~ ل اعطاء احد رتبه**
+** Welcome ~ لعمل ترحيب ب روم مخصص سوي روم ب الاسم ده**
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+
+
+
 client.on('message', message => {
      if (message.content === "*ahelp") {
      let embed = new Discord.RichEmbed()
@@ -242,8 +274,8 @@ client.on('message', message => {
 .addField('     ** *bc **  ' ,' **ل ارسال رساله لاعضاء السيرفر بشكل جميل ومطور** ')
 .addField('     ** *nbc **  ' ,' **ل ارسال رساله لاعضاء السيرفر  بس غير مطور فقط الكلام** ')
 .addField('     ** *send **  ' ,' **ل عمل تصويت ب روم ** ')
-.addField('     ** *mute **  ' ,' **لعمل ميوت كتابي لحد** ')
-.addField('     ** *unmute ** ' ,' **لفك الميوت الكتابي** ')
+.addField('     ** *mute ** ' ,' **لعمل ميوت كتابي لحد** ')
+.addField('     ** *unmute ** ~ **لفك الميوت الكتابي** ')
 .addField('     ** *cchat **  ' ,' **لتقفيل الشات ما احد يقدر يكتب به** ')
 .addField('     ** *uchat **  ' ,' **لفتح الشات تاني** ')
 .addField('     ** Welcom **  ' ,' **لعمل ترحيب ل شخص دخل جديد ب السيرفر سوي روم اسمو Welcome** ')

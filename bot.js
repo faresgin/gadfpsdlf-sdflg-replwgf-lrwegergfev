@@ -210,26 +210,7 @@ client.on("message", message => {
    
    }
    });
- 
-//none
- 
-client.on('message', message => {
-     if (message.content === "*phelp") {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('     **اوامر عامه** ' ,' **الاوامر العامه الخاصه ب الزاور** ')
-.addField('     ** **  ' ,' ** ** ')
-.addField('     ** *avatar **  ' ,' **لتجيب صورة احد كل العليك تكتب الامر وتمنشنو** ')
-.addField('     ** *support **  ' ,' **لسيرفر الدعم الفني** ')
-.addField('     ** *inv **  ' ,' **لدعوة البوت لسيرفرك** ')
-.addField('     ** *id **  ' ,' **لمعرفة معلوماتك الخاصه** ')
-.addField('     ** *server ** ' ,' **لمعرفة معلومات السيرفر**')
-.addField('     ** *ping **  ' ,' **لمعرفة سرعة البوت**')
-.addField('     ** *bans **  ' ,' **يجيب لك عدد الاشخاص المبنده في السيرفر** ')
-.addField('     ** **  ' ,' ** ** ')
-.setColor('RANDOM')
-  message.channel.sendEmbed(embed);
-    }
+
 });
  
  
@@ -260,33 +241,6 @@ client.on("message", message => {
    
    }
    });
- 
- 
- 
-client.on('message', message => {
-     if (message.content === "*ahelp") {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('     **اوامر اداريه** ' ,' **الاومر الخاصه ب الادمنيه** ')
-.addField('     ** **  ' ,' ** ** ')
-.addField('     ** *clear **  ' ,' **لمسح جميع الرسايل ال ب الروم** ')
-.addField('     ** *bc **  ' ,' **ل ارسال رساله لاعضاء السيرفر بشكل جميل ومطور** ')
-.addField('     ** *nbc **  ' ,' **ل ارسال رساله لاعضاء السيرفر  بس غير مطور فقط الكلام** ')
-.addField('     ** *send **  ' ,' **ل عمل تصويت ب روم ** ')
-.addField('     ** *mute ** ' ,' **لعمل ميوت كتابي لحد** ')
-.addField('     ** *unmute ** ~ **لفك الميوت الكتابي** ')
-.addField('     ** *cchat **  ' ,' **لتقفيل الشات ما احد يقدر يكتب به** ')
-.addField('     ** *uchat **  ' ,' **لفتح الشات تاني** ')
-.addField('     ** Welcom **  ' ,' **لعمل ترحيب ل شخص دخل جديد ب السيرفر سوي روم اسمو Welcome** ')
-.addField('     ** *role **  ' ,' **ل اعطاء رتبه لحد اكتب الامر ومنشنو** ')
-.addField('     ** log **  ' ,' **ل عمل روم للوق سوي بس روم ب اسم log** ')
-.addField('     ** *kick **  ' ,' **لطرد احد من السيرفر اكتب الامر ومنشنو** ')
-.addField('     ** *ban **  ' ,' **لتبنيد شخص ب السيرفر بس اكتب الامر ومنشنو والسبب** ')
-.addField('     ** **  ' ,' ** ** ')
-.setColor('RANDOM')
-  message.channel.sendEmbed(embed);
-    }
-});
  
 //كود الافتار
  

@@ -173,21 +173,21 @@ client.on('message', message => {
 //nnnn
 
 client.on("message", message => {
-	var prefix = "-";
+	var prefix = "*";
  if (message.content === "*phelp") {
 	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
       .setDescription(`
       ❋─────❋ اوامر عامة ❋─────❋
-❖*avatar ~ لعرض صورتك او صورة حد تمنشنو
-❖*server ~يعرض لك معلومات عن السيرفر
-❖*bot ~ يعرض لك معلومات البوت
-❖*support ~ يرسل لك رابط الدعم الفني ب الخاص
-❖*inv ~ يرسل لك رابط اضافة البوت خاص
-❖*id ~ يجيب لك معلومات حسابك
-❖*ping ~ لمعرفة سرعة البوت
-❖*bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر
+*avatar ~ لعرض صورتك او صورة حد تمنشنو
+*server ~يعرض لك معلومات عن السيرفر
+*bot ~ يعرض لك معلومات البوت
+*support ~ يرسل لك رابط الدعم الفني ب الخاص
+*inv ~ يرسل لك رابط اضافة البوت خاص
+*id ~ يجيب لك معلومات حسابك
+*ping ~ لمعرفة سرعة البوت
+*bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر
 `)
    message.author.sendEmbed(embed)
     

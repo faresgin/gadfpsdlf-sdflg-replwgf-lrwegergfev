@@ -192,8 +192,8 @@ client.on("message", message => {
 	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed() 
       .setColor("RANDOM")
-      .setDescription(`
-      **❋─────❋ اوامر عامة ❋─────❋**
+      .setTitle('
+ **❋─────❋ اوامر عامة ❋─────❋**
 ** *avatar ~ لعرض صورتك او صورة حد تمنشنو**
 ** *server ~يعرض لك معلومات عن السيرفر**
 ** *bot ~ يعرض لك معلومات البوت**
@@ -202,7 +202,9 @@ client.on("message", message => {
 ** *id ~ يجيب لك معلومات حسابك**
 ** *ping ~ لمعرفة سرعة البوت**
 ** *bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر**
-`)
+')
+     
+
    message.author.sendEmbed(embed)
     
    }

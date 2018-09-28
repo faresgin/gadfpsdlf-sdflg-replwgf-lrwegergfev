@@ -170,6 +170,39 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
+//nnnn
+
+client.on("message", message => {
+	var prefix = "-";
+ if (message.content === "*phelp") {
+	 message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+  const embed = new Discord.RichEmbed() 
+      .setColor("RANDOM")
+      .setDescription(`
+      ❋─────❋ اوامر عامة ❋─────❋
+❖*avatar ~ لعرض صورتك او صورة حد تمنشنو
+❖*server ~يعرض لك معلومات عن السيرفر
+❖*bot ~ يعرض لك معلومات البوت
+❖*support ~ يرسل لك رابط الدعم الفني ب الخاص
+❖*inv ~ يرسل لك رابط اضافة البوت خاص
+❖*id ~ يجيب لك معلومات حسابك
+❖*ping ~ لمعرفة سرعة البوت
+❖*bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر
+`)
+   message.author.sendEmbed(embed)
+    
+   }
+   }); 
+
+//عدد الاشخاص المبنده
+
+client.on('message', message => {
+    if (message.content.startsWith("*bans")) {
+        message.guild.fetchBans()
+        .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
+  .catch(console.error);
+}
+});
 
 //none
 

@@ -71,7 +71,7 @@ https://discord.gg/FNqMbzm
   client.channels.find('id', '494557724160294922').setName("");
 
 
-    }, 50000);
+    }, 30000);
   });
 
 

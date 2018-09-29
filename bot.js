@@ -49,7 +49,7 @@ client.on('message' , message => {
  .setDescription("الدعم الفني" + `
  **
 سيرفر الدعم الفني |
-https://discord.gg/FNqMbzm
+https://discord.gg/Fp8pEt3
  **
 `);
   message.author.sendEmbed(embed);

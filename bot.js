@@ -56,50 +56,6 @@ https://discord.gg/FNqMbzm
    }
 });
  
-//nnn
- 
-//【bots-commands】ىى
- 
- client.on("ready", async  => {
-  setInterval(function(){
-  client.channels.find('id', '494557724160294922').setName("【");
-  client.channels.find('id', '494557724160294922').setName("【b");
-  client.channels.find('id', '494557724160294922').setName("【bo");
-  client.channels.find('id', '494557724160294922').setName("【bot");
-  client.channels.find('id', '494557724160294922').setName("【bots");
-  client.channels.find('id', '494557724160294922').setName("【bots-");
-  client.channels.find('id', '494557724160294922').setName("【bots-c");
-  client.channels.find('id', '494557724160294922').setName("【bots-co");
-  client.channels.find('id', '494557724160294922').setName("【bots-com");
-  client.channels.find('id', '494557724160294922').setName("【bots-comm");
-  client.channels.find('id', '494557724160294922').setName("【bots-comma");
-  client.channels.find('id', '494557724160294922').setName("【bots-comman");
-  client.channels.find('id', '494557724160294922').setName("【bots-command");
-  client.channels.find('id', '494557724160294922').setName("【bots-commands");
-  client.channels.find('id', '494557724160294922').setName("【bots-commands】"); 
- 
-    }, 50000);
-  });
- 
- 
-//ىى
- 
- client.on("ready", async  => {
-  setInterval(function(){
-  client.channels.find('id', '494557396656455730').setName("【");
-  client.channels.find('id', '494557396656455730').setName("【m");
-  client.channels.find('id', '494557396656455730').setName("【ma");
-  client.channels.find('id', '494557396656455730').setName("【mai");
-  client.channels.find('id', '494557396656455730').setName("【main");
-  client.channels.find('id', '494557396656455730').setName("【main-");
-  client.channels.find('id', '494557396656455730').setName("【main-c");
-  client.channels.find('id', '494557396656455730').setName("【main-ch");
-  client.channels.find('id', '494557396656455730').setName("【main-cha");
-  client.channels.find('id', '494557396656455730').setName("【main-chat】");
- 
-    }, 30000);
-  });
- 
 //كود الهيلب المطور الجميل
  
  

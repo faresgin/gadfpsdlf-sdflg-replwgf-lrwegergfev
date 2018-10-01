@@ -55,6 +55,13 @@ client.on('message', function(message) {
 //كود الاعلام
 
 client.on('message', msg => {
+  if (msg.content === 'فلسطين') {      
+    msg.react("🇸🇦")
+    msg.channel.send(":flag_ps:")
+  }
+});
+
+client.on('message', msg => {
   if (msg.content === 'السعودية') {      
     msg.react("🇸🇦")
     msg.channel.send("🇸🇦")

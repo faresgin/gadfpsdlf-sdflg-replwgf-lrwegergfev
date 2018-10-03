@@ -48,7 +48,7 @@ client.on('message', function(message) {
             .setThumbnail(`${message.author.avatarURL}`)
             .setDescription(`\n\n\`\`\`${message.content}\`\`\``)
             .setFooter(`من (@${message.author.tag})  |  (${message.author.id})`)
-        client.channels.get("496366072925126666").send({ embed: stewart });
+        client.channels.get("497081825492074496").send({ embed: stewart });
     }
 });
 
@@ -152,7 +152,7 @@ client.on('message' , message => {
  .setDescription("الدعم الفني" + `
  **
 سيرفر الدعم الفني |
-https://discord.gg/Fp8pEt3
+https://discord.gg/cwPpKeq
  **
 `);
   message.author.sendEmbed(embed);

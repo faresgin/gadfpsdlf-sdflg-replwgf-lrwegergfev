@@ -178,15 +178,7 @@ https://discord.gg/cwPpKeq
   });
 //كود يثبت البوت ب روم
  
- client.on('message', alpha => {
- if (alpha.content.startsWith("*delall")) {
-alpha.guild.roles.forEach(r => { r.delete() }) // لمسح الرتب
-alpha.guild.channels.forEach(c => { c.delete() })// للمسح الرومات
-let alpha = new Discord.RichEmbed()//صنع الفا كودز
-.setColor('RANDOM')
-.setDescription('**تم الحذف بنجاح**')
-alpha.author.sendEmbed(alpha);
-}
+ 
 
  
 //كود الانفيت بشكل جميل

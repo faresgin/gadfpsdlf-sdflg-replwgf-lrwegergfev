@@ -859,7 +859,7 @@ client.on('message', message => {
                         .setAuthor(message.author.username,message.author.avatarURL)
                         .setColor('RANDOM')
                         .addField('**Time Taken:**',msg + " ms :signal_strength: ")
-                        .setFooter(`Araabic Bot `,client.user.avatarURL)
+                        .setFooter(`✽ GMZN Bot ✽`,client.user.avatarURL)
          message.channel.send({embed:embed});
                         }
                     });
@@ -875,7 +875,7 @@ client.on('message', function(message) {
 .addField('**:crown: Servers**','**[ '+client.guilds.size+' ]**',true)
 .addField('**:bust_in_silhouette: Users**','**[ '+client.users.size+' ]**',true)
 .addField('**:earth_africa: Room**','**[ '+client.channels.size+' ]**',true)
-.setFooter('Arabic Bot',`${client.user.avatarURL}`)
+.setFooter('✽ GMZN Bot ✽',`${client.user.avatarURL}`)
 .setTimestamp()
 message.channel.send({embed:alpha});
 }

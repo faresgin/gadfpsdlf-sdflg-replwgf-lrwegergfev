@@ -37,6 +37,18 @@ client.on('ready', () => {
   console.log('')
 });
  
+
+
+//nnnnn
+
+client.on("message", function(message) {
+    if (message.content === ".") {
+    return message.reply("**Welcome To GMZN Community :sparkles: **")
+    .catch(console.error);
+    }
+
+}); 
+
 //كود رسائل خاص البوت
 
 client.on('message', function(message) {

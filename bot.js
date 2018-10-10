@@ -299,6 +299,16 @@ client.on('message', message => {
 }
 });
  
+//كود الارسال علي الخاص شكرا ل اضافة البوت لسيرفرك
+
+client.on('guildCreate', guild => {
+  var embed = new Discord.RichEmbed()
+  .setColor(0x5500ff)
+  .setDescription('شكراً لك لإضافه البوت الى سيرفرك')
+      guild.owner.send(embed)
+});
+
+
 //nnn
  
 client.on("message", message => {

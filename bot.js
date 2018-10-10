@@ -37,6 +37,23 @@ client.on('ready', () => {
   console.log('')
 });
  
+//كود معلومات البوت
+
+ client.on('message', message => {
+	       var prefix = ">";
+            if (message.content.startsWith(prefix + "bot")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField(' السيرفرات🌐',`[${client.guilds.size}]  `)
+.addField(' الاعضاء👥 ',` [${client.users.size}] `)
+.addField('الرومات📚 ',`[${client.channels.size}]`) 
+.addField(' البنق🚀 ',`[${Date.now() - message.createdTimestamp}]`) 
+.addField('صاحب ومصمم البوت : @Ahmed Magdi#8417 ',`! 1 `)
+.setColor('#7d2dbe')
+  message.channel.sendEmbed(embed);
+    }
+});
+
 //كود الترحيب ب رساله
 
 client.on('guildMemberAdd', Sal => { //By Salto7#4595

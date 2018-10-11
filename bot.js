@@ -38,7 +38,18 @@ client.on('ready', () => {
  
 //كود معلومات البوت
 
-
+client.on('message', m => {
+    if (m.content.startsWith('say')) {
+        var args = m.content.split(" ");
+        var str = ``
+        if (!args[1]) {
+            str+=`You Have To Type Something ..`
+        } else {
+            str+=args.join(" ").slice(args[1].length);
+        };
+        m.channel.send(str);
+    };
+});
 
 //كود الترحيب ب رساله
 

@@ -38,7 +38,7 @@ client.on('ready', () => {
 
 //كود الساعه
 
-var prefix = "*";
+var p = "*";
 client.on('message', message => {
          if (message.content === prefix + "time") {
          if (!message.channel.guild) return message.reply('** This command only for servers **');  

@@ -44,7 +44,7 @@ client.on('message', m => {
         var args = m.content.split(" ");
         var str = ``
         if (!args[1]) {
-            str+=`You Have To Type Something ..`
+            str+=`يرجي كتاية النص ..`
         } else {
             str+=args.join(" ").slice(args[1].length);
         };

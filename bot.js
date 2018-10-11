@@ -39,7 +39,8 @@ client.on('ready', () => {
 //كود معلومات البوت
 
 client.on('message', m => {
-    if (m.content.startsWith('say')) {
+    var prefix = "*"
+    if (m.content.startsWith(prefix + 'say')) {
         var args = m.content.split(" ");
         var str = ``
         if (!args[1]) {

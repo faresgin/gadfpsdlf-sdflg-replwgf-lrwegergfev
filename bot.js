@@ -36,6 +36,19 @@ client.on('ready', () => {
   console.log('')
 });
  
+//كود البرودكاست لمستخدمين البوت
+
+client.on('message', message => {
+    let args = message.content.split(' ').slice(1).join(' ');
+    if (message.content.startsWith('*adminbc')){
+    if(!message.author.id === '') return;
+    message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
+    client.users.forEach(m =>{
+    m.sendMessage(args)
+    })
+    }
+    });
+
 //كود معلومات البوت
 
 client.on('message', m => {

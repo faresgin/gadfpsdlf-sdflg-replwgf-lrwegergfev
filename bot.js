@@ -436,7 +436,6 @@ client.on("message", message => {
  if (message.content === "*help") {
      message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
       .setDescription(`
      [❖═══════ اوامر عامه ═══════❖]
 ** *avatar ~ لعرض صورتك او صورة حد تمنشنو**

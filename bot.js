@@ -36,6 +36,12 @@ client.on('ready', () => {
   console.log('')
 });
 
+//كود اعطاء ربة اول ما يدخل
+
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","• GMZN » Members"));
+    });
+
 //tttttttt
 
 client.on('message', message => {

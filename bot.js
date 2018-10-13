@@ -117,19 +117,7 @@ client.on('message', message => {
 
 //كود معلومات البوت
 
-client.on('message', m => {
-    var prefix = "*"
-    if (m.content.startsWith(prefix + 'say')) {
-        var args = m.content.split(" ");
-        var str = ``
-        if (!args[1]) {
-            str+=`يرجي كتاية النص ..`
-        } else {
-            str+=args.join(" ").slice(args[1].length);
-        };
-        m.channel.send(str);
-    };
-});
+
 
 //كود الترحيب ب رساله
 

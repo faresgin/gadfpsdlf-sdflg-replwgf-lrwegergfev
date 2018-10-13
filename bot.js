@@ -36,6 +36,23 @@ client.on('ready', () => {
   console.log('')
 });
 
+//ttett
+
+client.on('message', message => {
+
+if (message.content === '..') {
+message.channel.send('
+**السلام عليكم في استضافة جمزن نحن لبيع البوتات شغاله 24 ساعه**
+**البوت انشائهو ورفعه علي استضافتنا ب 5 الاف كريدت فقط**
+**اما اسعار الاكواد مع مسؤول الاستضافة**
+`لشراء بوت او تركيب كود علي بوتك وصال مع`
+[@Ahmed Magdi#8417 ]
+')
+
+}
+
+ });    
+
 //كود التيكت
 
 client.on("message", (message) => {
@@ -202,7 +219,7 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
 client.on('message', message => {
 
 if (message.content === '.') {
-message.channel.send('**Welcome To GMZN Community :sparkles: **')
+message.channel.send('**Welcome To GMZN Host :sparkles: **')
 
 }
 

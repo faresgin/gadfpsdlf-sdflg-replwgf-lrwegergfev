@@ -36,6 +36,10 @@ client.on('ready', () => {
   console.log('')
 });
 
+//كود الفل والبونتس والتوب
+
+
+
 //كود اعطاء ربة اول ما يدخل
 
 client.on('guildMemberAdd', member=> {
@@ -358,25 +362,6 @@ https://discord.gg/cwPpKeq
   message.author.sendEmbed(embed);
    }
 });
- 
-//كود الهيلب المطور الجميل
- 
- 
-        client.on('message', message => {
-          var prefix = '*';
-          if (message.content.startsWith(prefix + 'help')) {
-      let embed = new Discord.RichEmbed()
-      .addField('*phelp' ,'     :earth_americas:  للحصول على قائمة  الاوامر العامه للزوار:earth_americas: ')
-      .addField('*ahelp' ,'     :crown:   للحصول على قائمة  الاداره :crown:  ')
-      .addField('*mhelp' ,'     :musical_note:   للحصول على قائمة  الموسيقى :musical_note:  ')
-      .addField('*ghelp' ,'     :desktop:    للحصول على قائمة  الالعاب :desktop:  ')
-      .setColor('RANDOM')
-      message.channel.send(embed)
-      }
-  });
-//كود يثبت البوت ب روم
- 
- 
 
  
 //كود الانفيت بشكل جميل
@@ -420,25 +405,7 @@ http://cutt.us/gmzninv
  
 //});
  
-//كود هيلب الجيمز
  
-client.on("message", message => {
-    var prefix = "*";
- if (message.content === "*ghelp") {
-     message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setDescription(`
-      **❋─────❋ اوامر الالعاب ❋─────❋**
- 
-** *xo ~ كود لعبة اكس او**
-`)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
- 
-//nnnn
  
  
  
@@ -466,61 +433,62 @@ client.on('guildCreate', guild => {
  
 client.on("message", message => {
     var prefix = "*";
- if (message.content === "*phelp") {
+ if (message.content === "*help") {
      message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
   const embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setDescription(`
-      **❋─────❋ اوامر عامة ❋─────❋**
+     [❖═══════ اوامر عامه ═══════❖]
 ** *avatar ~ لعرض صورتك او صورة حد تمنشنو**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** *server ~يعرض لك معلومات عن السيرفر**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** *bot ~ يعرض لك معلومات البوت**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** *support ~ يرسل لك رابط الدعم الفني ب الخاص**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** *inv ~ يرسل لك رابط اضافة البوت خاص**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** *id ~ يجيب لك معلومات حسابك**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** *ping ~ لمعرفة سرعة البوت**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** *bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** اكتب اسم اي بلد يطلع لك علمها**
-**~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
+
 ** *time ~ لمعرفة الساعه في مكه المكرمه او مصر او الامارات**
-*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~**
-`)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
- 
- 
-//الهيلب حق الاداره
- 
-client.on("message", message => {
-    var prefix = "*";
- if (message.content === "*ahelp") {
-     message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed()
-      .setColor("RANDOM")
-      .setDescription(`
-      **❋─────❋ اوامر اداريه ❋─────❋**
+
+** *ticket ~ لعمل روم مساعده او استفسار مبينك انت والادمنيه**
+
+** *xo ~ ل لعب لعبة اكس او**
+
+     [❖═══════ اوامر اداريه ═══════❖]
+
 ** *uchat ~ ل فك تقفيل الشات**
+
 ** *cchat ~ ل تقفيل الشات**
+
 ** *umute ~ لفك الميوت الكتابي**
+
 ** *mute ~ لعمل ميوت كتابي لحد**
+
 ** *send ~ ل عمل تصويت ب روم محدد**
+
 ** *nbc ~ ل ارسال رساله لاعضاء السيرفر  بس غير مطور فقط الكلام**
+
 ** *bc ~ لعمل برودكاست لأعضاء السيرفر**
+
 ** *ban ~ ل تبنيد احد من السيرفر**
-** log ~ لعمل روم مخصص ل لوق السيرفر سوي روم ب ده الاسم**
+
 ** *kick ~ ل طرد احد من السيرفر**
+
 ** *role ~ ل اعطاء احد رتبه**
+
 ** Welcome ~ لعمل ترحيب ب روم مخصص سوي روم ب الاسم ده**
+
+** log ~ لعمل روم مخصص ل لوق السيرفر سوي روم ب ده الاسم**
+
 `)
    message.author.sendEmbed(embed)
    

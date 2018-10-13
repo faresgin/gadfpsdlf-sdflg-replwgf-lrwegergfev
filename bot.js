@@ -42,7 +42,7 @@ client.on("message", (message) => {
     /// ALPHA CODES
    if (message.content.startsWith("*ticket")) {     /// ALPHA CODES
         const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
-        if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(` واعطأها لك/`Support Team`/لا يوجد رتبة سبورت تيم برجاء انشاء رتبة ب اسم `);
+        if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`واعطاء الرتبة برمشن ادمنستريتور واعطاءها لك/`Support Team`/لا يوجد رتبة سبورت تيم برجاء انشاء رتبة ب اسم `);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
         message.guild.createChannel(`ticket-${message.author.username}`, "text").then(c => {
             let role = message.guild.roles.find("name", "Support Team");
@@ -71,12 +71,12 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("$close")) {
+  if (message.content.startsWith("*close")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
-        message.channel.send(`هل أنت متأكد؟ بعد التأكيد ، لا يمكنك عكس هذا الإجراء!\n للتأكيد ، اكتب\`$confirm\`. سيؤدي ذلك إلى مهلة زمنية في غضون 10 ثوانٍ وإلغائها`)
+        message.channel.send(`هل أنت متأكد؟ بعد التأكيد ، لا يمكنك عكس هذا الإجراء!\n للتأكيد ، اكتب\`*confirm\`. سيؤدي ذلك إلى مهلة زمنية في غضون 10 ثوانٍ وإلغائها`)
             .then((m) => {
-                message.channel.awaitMessages(response => response.content === '$confirm', {
+                message.channel.awaitMessages(response => response.content === '*confirm', {
                         max: 1,
                         time: 10000,
                         errors: ['time'],

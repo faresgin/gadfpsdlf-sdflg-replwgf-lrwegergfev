@@ -36,6 +36,17 @@ client.on('ready', () => {
   console.log('')
 });
 
+//tttttttt
+
+client.on('message', message => {
+
+if (message.content === '..') {
+message.channel.send('*ticketللمساعده او اي شي برجاء كتابة امر ')
+
+}
+
+ });
+
 //كود التيكت
 
 client.on("message", (message) => {

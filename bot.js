@@ -56,7 +56,7 @@ client.on("message", message => {
     });
   }
  
-  if(message.content.startsWith(p + "startdisco")) {
+  if(message.content.startsWith(prefix + "startdisco")) {
     if(allowedUsers.includes(message.author.id)) {
     setInterval(() => { discoRole(); }, config.ms);
     message.channel.send("```css\nDiscoing...```");
@@ -77,7 +77,7 @@ if(message.content.startsWith(prefix + "stopdisco")) {
  
 });
 const config = require('config.json');
-const prefix = config.prefix;
+const p = config.p;
  
 const allowedUsers = config.allowedUsers;
 const roles = config.roleToDisco;

@@ -77,7 +77,7 @@ if(message.content.startsWith(prefix + "stopdisco")) {
  
 });
 const config = require('config.json');
-const p = config.p;
+const pr = config.pr;
  
 const allowedUsers = config.allowedUsers;
 const roles = config.roleToDisco;

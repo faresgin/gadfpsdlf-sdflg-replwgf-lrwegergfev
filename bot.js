@@ -44,7 +44,7 @@ client.on('ready', () => {
 
 //كود الفل والبونتس والتوب
 
-let bane = JSON.parse(fs.readFileSync("./alpha.json", "utf8"));
+let bane = JSON.parse(fs.readFileSync("alpha.json", "utf8"));
 let banse = new Set();
 client.on('guildBanAdd', function(guild) {
   guild.fetchAuditLogs().then(logs => {

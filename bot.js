@@ -54,15 +54,6 @@ client.on('guildMemberAdd', member=> {
 
 //tttttttt
 
-client.on('message', message => {
-
-if (message.content === '..') {
-message.channel.send('*ticketللمساعده او اي شي برجاء كتابة امر ')
-
-}
-
- });
-
 //كود التيكت
 
 client.on("message", (message) => {

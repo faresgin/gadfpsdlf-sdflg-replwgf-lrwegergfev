@@ -45,7 +45,6 @@ client.on('ready', () => {
 //كود الكريدت
 
 const moment = require("moment");  
-const fs = require("fs");      
 const dateFormat = require('dateformat');
 const Canvas = require("canvas");
 let profile = JSON.parse(fs.readFileSync("profile.json", "utf8"))

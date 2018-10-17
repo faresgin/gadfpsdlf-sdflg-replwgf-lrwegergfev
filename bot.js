@@ -360,7 +360,7 @@ client.on('message' , message => {
  .setDescription("Add me" + `
  **
 رابط البوت |
-http://cutt.us/gmzninv
+http://cutt.us/GMZNHostinv
  **
 `);
   message.author.sendEmbed(embed);

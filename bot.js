@@ -42,41 +42,6 @@ client.on('ready', () => {
   console.log('')
 });
 
-//كود الرينبو
-
-
-
-//كود الفل والبونتس والتوب
-
-let bane = JSON.parse(fs.readFileSync("alpha.json", "utf8"));
-let banse = new Set();
-client.on('guildBanAdd', function(guild) {
-  guild.fetchAuditLogs().then(logs => {
-    const ser = logs.entries.first().executor;
-    if(!bane[ser.id+guild.id]) bane[ser.id+guild.id] = {
-      bans: 2
-    }
-    let boner = bane[ser.id+guild.id]
-banse.add(ser.id)
-boner.bans = Math.floor(boner.bans+1)
-
-
-setTimeout(() => {
-  boner.bans = 2
-  banse.delete(ser.id)
-},8000)
-
-if(boner.bans > 2) {
-  let roles = guild.members.get(ser.id).roles.array()
-guild.members.get(ser.id).removeRoles(roles)
-}
-
-    })
-    fs.writeFile('./alpha.json', JSON.stringify(bane), (err) => {
-if (err) console.error(err);
-})
-
-})
 
 //كود اعطاء ربة اول ما يدخل
 
@@ -210,19 +175,8 @@ client.on('message', message => {
         }
     });
  
-//كود البرودكاست لمستخدمين البوت
 
-client.on('message', message => {
-    let args = message.content.split(' ').slice(1).join(' ');
-    if (message.content.startsWith('*adminbc')){
-    if(!message.author.id === '') return;
-    if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
-    message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
-    client.users.forEach(m =>{
-    m.sendMessage(args)
-    })
-    }
-    });
+
 
 //كود معلومات البوت
 
@@ -443,6 +397,9 @@ http://cutt.us/gmzninv
  
 client.on('message', message => {
     if (message.content.startsWith("*bans")) {
+     if(!message.guild.member(message.author).hasPermission("BAN_MEMBERS")) return message.reply("**انت لا تملك صلاحية الباند**");
+
+
         message.guild.fetchBans()
         .then(bans => message.channel.send(`${bans.size} عدد اشخاص المبندة من السيرفر `))
   .catch(console.error);

@@ -1182,6 +1182,7 @@ client.on('message', message => {
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('*nbc')){
  if(!message.author.id === '') return;
+  if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 message.channel.sendMessage('جار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)

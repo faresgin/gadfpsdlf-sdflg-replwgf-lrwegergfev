@@ -42,14 +42,6 @@ client.on('ready', () => {
   console.log('')
 });
 
-///fffff
-
-let channel =     client.channels.get("466240185596903425")
-setInterval(function() {
-channel.send(`**لا إله إلا الله محمد عبده ورسوله # استغفر الله العظيم وآتوب اليه
-**`);
-}, 7200000)
-})
 
 //ttttttttt
 

@@ -45,7 +45,6 @@ client.on('ready', () => {
 //كود الرينبو
 
 const suck = JSON.parse(fs.readFileSync('./suck.json', 'utf8'));
-const prefix = "*";
 
 client.on("message", message => {
     fs.writeFile('./suck.json', JSON.stringify(suck));

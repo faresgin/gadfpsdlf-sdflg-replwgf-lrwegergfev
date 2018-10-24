@@ -46,7 +46,7 @@ client.on('ready', () => {
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('id server').roles.find("name", "Sec").setColor("RANDOM");
+    client.guilds.get('458387793975181314').roles.find("name", "Sec").setColor("RANDOM");
   };
   setInterval(lol, 10000);
 });

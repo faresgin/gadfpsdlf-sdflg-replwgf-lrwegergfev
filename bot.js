@@ -42,6 +42,15 @@ client.on('ready', () => {
   console.log('')
 });
 
+//رينبو
+
+client.on("ready", () => {
+  function lol() {
+    client.guilds.get('id server').roles.find("name", "Sec").setColor("RANDOM");
+  };
+  setInterval(lol, 10000);
+});
+
 //ttttttttt
 
 client.on('message', msg => { 

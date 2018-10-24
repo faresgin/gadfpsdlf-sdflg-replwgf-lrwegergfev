@@ -310,18 +310,7 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     var channel =Sal.guild.channels.find('name', 'welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
     if (!channel) return;
     channel.send({embed : embed});
-    });
-
-//nnnnn
-
-client.on('message', message => {
-
-if (message.content === '.') {
-message.channel.send('**Welcome To GMZN Host :sparkles: **')
-
-}
-
- });    
+    });  
 
 //كود الترحيب علي الخاص
 
@@ -585,6 +574,19 @@ client.on("message", message => {
 
 ** log ~ لعمل روم مخصص ل لوق السيرفر سوي روم ب ده الاسم**
 
+     [❖═══════ اوامر اغاني═══════❖]
+
+** *play ~ لتشغيل الاغنيه**
+
+** *stop ~ لأيقاف الاغنيه**
+
+** *skip ~ لتخطي الاغنيه**
+
+** *vol <namber> ~ ل تعلية واخفاض صوت الاغنيه**
+
+** *pause ~ لأيقاف الاغنيه موقتا**
+
+** *resume ~ لأستمرار الاغنيه**
 `)
    message.author.sendEmbed(embed)
    
@@ -662,34 +664,7 @@ if (message.content === 'fhelp') {
  
  
  
-  client.on('message', message => {
-   if (message.author.bot) return;
-    if (message.content === "*mhelp") {
-              if(!message.channel.guild) return message.reply(':x:  **The orders are not in your الاوامر مو فى **');
- const embed = new Discord.RichEmbed()
-         .setColor("#efa800")
-                   .setAuthor(message.author.username, message.author.avatarURL)
-          .setThumbnail(message.author.avatarURL)
-                .setTimestamp()
-   .setDescription(`
-                                                   
-*play <name> / To Play The Song
- 
-*stop / To Stop The Song
- 
-*skip / To Skip The Song
- 
-*vol <number> / To Change Volume
- 
-*pause / To Pause The Song
- 
-*resume / To Resume The Song
-**
-`);
- 
-     message.channel.send({embed});
-   }
-});
+  
  
  
  

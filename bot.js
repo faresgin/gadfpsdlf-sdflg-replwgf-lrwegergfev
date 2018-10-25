@@ -524,9 +524,9 @@ client.on('message', message => {
   var prefix = '*';
   if (message.content.startsWith(prefix + 'help')) {
 let embed = new Discord.RichEmbed()
-.addField('*help-puplic' ,'     :earth_americas:  للحصول على قائمة  الاوامر العامه للزوار:earth_americas: ')
-.addField('*help-admin' ,'     :crown:   للحصول على قائمة  الاداره :crown:  ')
-.addField('*help-music' ,'     :musical_note:   للحصول على قائمة  الموسيقى :musical_note:  ')
+.addField('*phelp' ,'     :earth_americas:  للحصول على قائمة  الاوامر العامه للزوار:earth_americas: ')
+.addField('*ahelp' ,'     :crown:   للحصول على قائمة  الاداره :crown:  ')
+.addField('*mhelp' ,'     :musical_note:   للحصول على قائمة  الموسيقى :musical_note:  ')
 .setColor('RANDOM')
 message.channel.send(embed)
 }
@@ -536,7 +536,7 @@ message.channel.send(embed)
 
 client.on("message", message => {
   var prefix = "*";
-if (message.content === "*help-puplic") {
+if (message.content === "*phelp") {
    message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
 const embed = new Discord.RichEmbed()
     .setDescription(`
@@ -575,7 +575,7 @@ const embed = new Discord.RichEmbed()
 
  client.on("message", message => {
   var prefix = "*";
-if (message.content === "*help-admin") {
+if (message.content === "*ahelp") {
    message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
 const embed = new Discord.RichEmbed()
     .setDescription(`
@@ -614,7 +614,7 @@ const embed = new Discord.RichEmbed()
 
  client.on("message", message => {
   var prefix = "*";
-if (message.content === "*help-music") {
+if (message.content === "*mhelp") {
    message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
 const embed = new Discord.RichEmbed()
     .setDescription(`

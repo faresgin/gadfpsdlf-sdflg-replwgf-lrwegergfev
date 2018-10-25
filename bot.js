@@ -520,13 +520,28 @@ client.on('guildCreate', guild => {
 
 //nnn
  
+client.on('message', message => {
+  var prefix = '*';
+  if (message.content.startsWith(prefix + 'help')) {
+let embed = new Discord.RichEmbed()
+.addField('*help-puplic' ,'     :earth_americas:  للحصول على قائمة  الاوامر العامه للزوار:earth_americas: ')
+.addField('*help-admin' ,'     :crown:   للحصول على قائمة  الاداره :crown:  ')
+.addField('*help-music' ,'     :musical_note:   للحصول على قائمة  الموسيقى :musical_note:  ')
+.setColor('RANDOM')
+message.channel.send(embed)
+}
+});
+
+//---------------------------------------------------
+
 client.on("message", message => {
-    var prefix = "*";
- if (message.content === "*help") {
-     message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-  const embed = new Discord.RichEmbed()
-      .setDescription(`
-     [❖═══════ اوامر عامه ═══════❖]
+  var prefix = "*";
+if (message.content === "*help-puplic") {
+   message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+const embed = new Discord.RichEmbed()
+    .setDescription(`
+   [❖═══════ اوامر عامه ═══════❖]
+
 ** *avatar ~ لعرض صورتك او صورة حد تمنشنو**
 
 ** *server ~يعرض لك معلومات عن السيرفر**
@@ -550,8 +565,21 @@ client.on("message", message => {
 ** *ticket ~ لعمل روم مساعده او استفسار مبينك انت والادمنيه**
 
 ** *xo ~ ل لعب لعبة اكس او**
+`)
+ message.author.sendEmbed(embed)
+ 
+ }
+ });
 
-     [❖═══════ اوامر اداريه ═══════❖]
+ //------------------------------------------------------------
+
+ client.on("message", message => {
+  var prefix = "*";
+if (message.content === "*help-admin") {
+   message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+const embed = new Discord.RichEmbed()
+    .setDescription(`
+   [❖═══════ اوامر اداريه ═══════❖]
 
 ** *uchat ~ ل فك تقفيل الشات**
 
@@ -576,8 +604,21 @@ client.on("message", message => {
 ** Welcome ~ لعمل ترحيب ب روم مخصص سوي روم ب الاسم ده**
 
 ** log ~ لعمل روم مخصص ل لوق السيرفر سوي روم ب ده الاسم**
+`)
+ message.author.sendEmbed(embed)
+ 
+ }
+ });
 
-     [❖═══════ اوامر اغاني═══════❖]
+ //-------------------------
+
+ client.on("message", message => {
+  var prefix = "*";
+if (message.content === "*help-music") {
+   message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
+const embed = new Discord.RichEmbed()
+    .setDescription(`
+   [❖═══════ اوامر اغاني═══════❖]
 
 ** *play ~ لتشغيل الاغنيه**
 
@@ -591,10 +632,10 @@ client.on("message", message => {
 
 ** *resume ~ لأستمرار الاغنيه**
 `)
-   message.author.sendEmbed(embed)
-   
-   }
-   });
+ message.author.sendEmbed(embed)
+ 
+ }
+ });
  
 //كود الافتار
  

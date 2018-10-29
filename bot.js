@@ -13,7 +13,7 @@ const prefix = '*'
  
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`*help | *inv | GMZN Host ,`,"http://twitch.tv/Idk")
+  client.user.setGame(`*help || GMZN Host ,`,"http://twitch.tv/Idk")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')

@@ -869,9 +869,6 @@ if (message.content.startsWith(adminprefix + 'ply')) {
   client.user.setGame(argresult);
     message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
 } else 
-  if (message.content === (adminprefix + "Percie")) {
-  message.guild.leave();        
-} else  
 if (message.content.startsWith(adminprefix + 'wt')) {
 client.user.setActivity(argresult, {type:'WATCHING'});
     message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
@@ -893,16 +890,6 @@ if (message.content.startsWith(adminprefix + 'st')) {
   client.user.setGame(argresult, "https://www.twitch.tv/idk");
     message.channel.sendMessage(`**:white_check_mark:   ${argresult}**`)
 }
-  if(message.content === adminprefix + "restart") {
-    if (!devs.includes(message.author.id)) return;
-        message.channel.send(`:warning:️ **Bot restarting by ${message.author.username}**`);
-      console.log("\n\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-      console.log(`⚠️ Bot restarting... ⚠️`);
-      console.log("===============================================\n\n");
-      client.destroy();
-      child_process.fork(__dirname + "bot.jss");
-      console.log(`Bot Successfully Restarted`);
-  }
 
 });
  

@@ -54,7 +54,7 @@ client.on('message', msg => {
       if (!msg.mentions.members.first()) return msg.reply('منشن الشخص المحدد')
       if (!args[0]) return msg.reply('اكتب السبب')
       //غير اسم الروم او سوي روم بذا الاسم 
-      if (msg.guild.channels.find('name', 'warns')) {
+      if (msg.guild.channels.find('name', '✽-warns')) {
         //اذا غيرت فوق غير هنا كمان 
         msg.guild.channels.find('name', 'warns').send(`
       تم اعطائك انذار : ${msg.mentions.members.first()}

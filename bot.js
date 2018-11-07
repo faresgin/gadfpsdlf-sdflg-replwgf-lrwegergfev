@@ -44,6 +44,49 @@ client.on('ready', () => {
 
 //رينبو
 
+client.on('message', message => {
+     if (message.author.bot) return;
+     if(!message.channel.guild) return;
+if (message.content.startsWith(prefix + "bottime")) {
+    let uptime = client.uptime;
+
+    let days = 0;
+    let hours = 0;
+    let minutes = 0;
+    let seconds = 0;
+    let notCompleted = true;
+
+    while (notCompleted) {
+
+        if (uptime >= 8.64e+7) {
+
+            days++;
+            uptime -= 8.64e+7;
+
+        } else if (uptime >= 3.6e+6) {
+
+            hours++;
+            uptime -= 3.6e+6;
+
+        } else if (uptime >= 60000) {
+
+            minutes++;
+            uptime -= 60000;
+
+        } else if (uptime >= 1000) {
+            seconds++;
+            uptime -= 1000;
+
+        }
+
+        if (uptime < 1000)  notCompleted = false;
+
+    }
+
+    message.channel.send("`" + `${days} days, ${hours} hrs, ${minutes} , ${seconds} sec` + "`");
+
+}
+});
 
 //ttttttttt
 
@@ -742,9 +785,10 @@ client.on('message', function(message) {
         if (message.content.startsWith(prefix + 'bot')) {
             var alpha= new Discord.RichEmbed()
 .setColor(`${Color[Math.floor(Math.random() * Color.length)]}`)
-.addField('**:crown: Servers**','**[ '+client.guilds.size+' ]**',true)
-.addField('**:bust_in_silhouette: Users**','**[ '+client.users.size+' ]**',true)
-.addField('**:earth_africa: Room**','**[ '+client.channels.size+' ]**',true)
+.addField('**:crown: السيرفرات**','**[ '+client.guilds.size+' ]**',true)
+.addField('**:bust_in_silhouette: الاشخاص**','**[ '+client.users.size+' ]**',true)
+.addField('**:earth_africa: الرومات**','**[ '+client.channels.size+' ]**',true)
+.addField('**بينج البوت:**',msg + " ms :signal_strength: ")
 .setFooter('✽ GMZN Bot ✽',`${client.user.avatarURL}`)
 .setTimestamp()
 message.channel.send({embed:alpha});

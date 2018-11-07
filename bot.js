@@ -47,7 +47,7 @@ client.on('ready', () => {
 client.on('message', message => {
      if (message.author.bot) return;
      if(!message.channel.guild) return;
-if (message.content.startsWith(prefix + "bottime")) {
+if (message.content.startsWith(prefix + "timb")) {
     let uptime = client.uptime;
 
     let days = 0;

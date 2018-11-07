@@ -596,8 +596,6 @@ const embed = new Discord.RichEmbed()
 
 ** *id ~ يجيب لك معلومات حسابك**
 
-** *ping ~ لمعرفة سرعة البوت**
-
 ** *bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر**
 
 ** اكتب اسم اي بلد يطلع لك علمها**
@@ -763,7 +761,7 @@ client.on('message', function(msg) {
 client.on('message', message => {
     if (message.author.bot) return
                                 if(!message.channel.guild) return;
-                        if (message.content.startsWith('*ping')) {
+                        if (message.content.startsWith('*bot')) {
                             if(!message.channel.guild) return;
                             var msg = `${Date.now() - message.createdTimestamp}`
                             var api = `${Math.round(client.ping)}`
@@ -771,7 +769,7 @@ client.on('message', message => {
                         let embed = new Discord.RichEmbed()
                         .setAuthor(message.author.username,message.author.avatarURL)
                         .setColor('RANDOM')
-                        .addField('**Time Taken:**',msg + " ms :signal_strength: ")
+                        .addField('**بينج البوت :**',msg + " ms :signal_strength: ")
                         .setFooter(`✽ GMZN Bot ✽`,client.user.avatarURL)
          message.channel.send({embed:embed});
                         }
@@ -788,7 +786,6 @@ client.on('message', function(message) {
 .addField('**:crown: السيرفرات**','**[ '+client.guilds.size+' ]**',true)
 .addField('**:bust_in_silhouette: الاشخاص**','**[ '+client.users.size+' ]**',true)
 .addField('**:earth_africa: الرومات**','**[ '+client.channels.size+' ]**',true)
-.addField('**بينج البوت:**',msg + " ms :signal_strength: ")
 .setFooter('✽ GMZN Bot ✽',`${client.user.avatarURL}`)
 .setTimestamp()
 message.channel.send({embed:alpha});

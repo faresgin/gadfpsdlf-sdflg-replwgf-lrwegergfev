@@ -502,10 +502,10 @@ client.on('message' , message => {
      const embed = new Discord.RichEmbed()
  .setColor("RANDOM")
  .setThumbnail(client.user.avatarURL)    
- .setDescription("Add me" + `
+ .setDescription("دعوة اضافة البوت" + `
  **
 رابط البوت |
-http://cutt.us/GMZNHostinv
+http://cutt.us/GMZNBot
  **
 `);
   message.author.sendEmbed(embed);

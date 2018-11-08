@@ -42,6 +42,16 @@ client.on('ready', () => {
   console.log('')
 });
 
+//-----------------
+
+client.on("ready", () => {
+  function arabecodes() {
+    client.guilds.get('id server').roles.find("name", "DISCO").setColor("RANDOM");
+  }
+  setInterval(arabecodes, 100);
+})
+
+
 //-----------
 
 client.on('ready',async () => { client.channels.find(ch => ch.id === "509934394358628352" && ch.type === 'voice').join(); });

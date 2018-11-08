@@ -54,7 +54,6 @@ client.on("ready", () => {
 
 //-----------
 
-client.on('ready',async () => { client.channels.find(ch => ch.id === "509934394358628352" && ch.type === 'voice').join(); });
 
 //رينبو
 

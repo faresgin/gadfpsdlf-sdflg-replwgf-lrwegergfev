@@ -48,7 +48,7 @@ client.on("ready", () => {
   function arabecodes() {
     client.guilds.get('458387793975181314').roles.find("name", "DISCO").setColor("RANDOM");
   }
-  setInterval(arabecodes, 7000);
+  setInterval(arabecodes, 5000);
 })
 
 

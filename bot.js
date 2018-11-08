@@ -575,7 +575,7 @@ if (message.content === "*help") {
 -----------------------------------------------------------------
 
 **يعمل 24 ساعه بدون توقف الا في حالة صيانه**
-** وسرعة البوت سريعه جداGMZN Hostعلي خادم**
+** وسرعة البوت سريعه جدا GMZN Host علي خادم**
 **البوت فيه اكواد حمايه من اي تهكير**
 **يعني سيرفرك البوت هيكونو في امان**
 
@@ -608,27 +608,27 @@ if (message.content === "*help") {
    [❖═══════ اوامر اداريه ═══════❖]
 -----------------------------------------------------
 
-** *bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر**
-
-** *uchat ~ ل فك تقفيل الشات**
-
-** *cchat ~ ل تقفيل الشات**
-
-** *umute ~ لفك الميوت الكتابي**
-
-** *mute ~ لعمل ميوت كتابي لحد**
-
-** *send ~ ل عمل تصويت ب روم محدد**
+** *bc ~ لعمل برودكاست لأعضاء السيرفر**
 
 ** *nbc ~ ل ارسال رساله لاعضاء السيرفر  بس غير مطور فقط الكلام**
 
-** *bc ~ لعمل برودكاست لأعضاء السيرفر**
+** *kick ~ ل طرد احد من السيرفر**
 
 ** *ban ~ ل تبنيد احد من السيرفر**
 
-** *kick ~ ل طرد احد من السيرفر**
+** *bans ~ يجيب لك عدد الاعضاء المبنده من السيرفر**
+
+** *mute ~ لعمل ميوت كتابي لحد**
+
+** *unmute ~ لفك الميوت الكتابي**
+
+** *cchat ~ ل تقفيل الشات**
+
+** *unchat ~ ل فك تقفيل الشات**
 
 ** *role ~ ل اعطاء احد رتبه**
+
+** *send ~ ل عمل تصويت ب روم محدد**
 
 ** Welcome ~ لعمل ترحيب ب روم مخصص سوي روم ب الاسم ده**
 
@@ -785,44 +785,27 @@ message.channel.send({embed:alpha});
  
 //بعض الاكواد الاداريه اولهم كود مسح الشات
  
-client.on('message', message => {
-if(message.author.bot) return;
-   if(!message.channel.guild) return;
-if(message.content.startsWith(prefix + 'clear')) {
-if(!message.channel.guild) return message.channel.send('**This Command is Just For Servers**').then(m => m.delete(5000));
-if(!message.member.hasPermission('MANAGE_MESSAGES')) return      message.channel.send('**You Do not have permission** `MANAGE_MESSAGES`' );
-let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
-let request = `Requested By ${message.author.username}`;
-message.channel.send(`**هل أنت متأكد من أنك تريد مسح الشات؟**`).then(msg => {
-msg.react('✅')
-.then(() => msg.react('❌'))
-.then(() =>msg.react('✅'))
- 
-let reaction1Filter = (reaction, user) => reaction.emoji.name === '✅' && user.id === message.author.id;
-let reaction2Filter = (reaction, user) => reaction.emoji.name === '❌' && user.id === message.author.id;
- 
-let reaction1 = msg.createReactionCollector(reaction1Filter, { time: 12000 });
-let reaction2 = msg.createReactionCollector(reaction2Filter, { time: 12000 });
-reaction1.on("collect", r => {
-message.channel.send(`جاري حذف الشات`).then(m => m.delete(5000));
-var msg;
-        msg = parseInt();
- 
-      message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-      message.channel.sendMessage("", {embed: {
-        title: "`` تم مسح الشات ``",
-        color: 0x06DF00,
-        footer: {
- 
-        }
-      }}).then(msg => {msg.delete(3000)});
- 
-})
-reaction2.on("collect", r => {
-message.channel.send(`**Chat deletion cancelled**`).then(m => m.delete(5000));
-msg.delete();
-})
-})
+client.on('message', msg => {
+  if (msg.author.bot) return;
+  if (!msg.content.startsWith(prefix)) return;
+  let command = msg.content.split(" ")[0];
+  command = command.slice(prefix.length);
+  let args = msg.content.split(" ").slice(1);
+
+    if(command === "clear") {
+        const emoji = client.emojis.find("name", "wastebasket")
+    let textxt = args.slice(0).join("");
+    if(msg.member.hasPermission("MANAGE_MESSAGES")) {
+    if (textxt == "") {
+        msg.delete().then
+    msg.channel.send("***```ضع عدد الرسائل التي تريد مسحها 👌```***").then(m => m.delete(3000));
+} else {
+    msg.delete().then
+    msg.delete().then
+    msg.channel.bulkDelete(textxt);
+        msg.channel.send("```php\nعدد الرسائل التي تم مسحها: " + textxt + "\n```").then(m => m.delete(3000));
+        }    
+    }
 }
 });
  

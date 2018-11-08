@@ -563,25 +563,13 @@ client.on('guildCreate', guild => {
 
 //nnn
  
-client.on('message', message => {
-  var prefix = '*';
-  if (message.content.startsWith(prefix + 'help')) {
-let embed = new Discord.RichEmbed()
-.addField('*phelp' ,'     :earth_americas:  للحصول على قائمة  الاوامر العامه للزوار:earth_americas: ')
-.addField('*ahelp' ,'     :crown:   للحصول على قائمة  الاداره :crown:  ')
-.setColor('RANDOM')
-message.channel.send(embed)
-}
-});
-
 //---------------------------------------------------
 
 client.on("message", message => {
   var prefix = "*";
-if (message.content === "*phelp") {
+if (message.content === "*help") {
    message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-const embed = new Discord.RichEmbed()
-    .setDescription(`
+ message.author.sendMessage(`
    [❖═══════ اوامر عامه ═══════❖]
 
 ** *avatar ~ لعرض صورتك او صورة حد تمنشنو**
@@ -605,20 +593,7 @@ const embed = new Discord.RichEmbed()
 ** *ticket ~ لعمل روم مساعده او استفسار مبينك انت والادمنيه**
 
 ** *xo ~ ل لعب لعبة اكس او**
-`)
- message.author.sendEmbed(embed)
- 
- }
- });
 
- //------------------------------------------------------------
-
- client.on("message", message => {
-  var prefix = "*";
-if (message.content === "*ahelp") {
-   message.channel.send('**تم ارسالك في الخاص** :mailbox_with_mail: ');
-const embed = new Discord.RichEmbed()
-    .setDescription(`
    [❖═══════ اوامر اداريه ═══════❖]
 
 ** *uchat ~ ل فك تقفيل الشات**
@@ -644,11 +619,13 @@ const embed = new Discord.RichEmbed()
 ** Welcome ~ لعمل ترحيب ب روم مخصص سوي روم ب الاسم ده**
 
 ** log ~ لعمل روم مخصص ل لوق السيرفر سوي روم ب ده الاسم**
-`)
- message.author.sendEmbed(embed)
- 
+
+
+`) 
  }
  });
+
+ //------------------------------------------------------------
 
  //-------------------------
 

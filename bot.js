@@ -202,7 +202,7 @@ message.channel.send(`**:moneybag: | ${message.author.username}, has transferrer
 //كود اعطاء ربة اول ما يدخل
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","•  Members »"));
+    member.addRole(member.guild.roles.find("name","•  GMZN » Members"));
     });
 
 //tttttttt
@@ -775,6 +775,34 @@ client.on('message', function(message) {
 .setFooter('✽ GMZN Bot ✽',`${client.user.avatarURL}`)
 .setTimestamp()
 message.channel.send({embed:alpha});
+}
+});
+
+------------
+
+client.on('message', message => {
+    if (message.content === ('$bot') {
+    message.channel.send({
+        embed: new Discord.RichEmbed()
+            .setAuthor(client.user.username,client.user.avatarURL)
+            .setThumbnail(client.user.avatarURL)
+            .setColor('RANDOM')
+            .setTitle('Arabe Codes.')
+            .addField('**My Ping**' , [`${Date.now() - message.createdTimestamp}` + 'MS'], true)
+            .addField('**RAM Usage**', `[${(process.memoryUsage().rss / 1048576).toFixed()}MB]`, true)
+            .addField('**Servers**', [client.guilds.size], true)
+            .addField('**Channels**' , `[ ${client.channels.size} ]` , true)
+            .addField('**Users**' ,`[ ${client.users.size} ]` , true)
+            .addField('**My Name**' , `[ ${client.user.tag} ]` , true)
+            .addField('**My ID**' , `[ ${client.user.id} ]` , true)
+            .addField('**DiscordJS**' , `[ ${Discord.version} ]` , true)
+            .addField('**NodeJS**' , `[ ${process.version} ]` , true)
+            .addField('**Arch**' , `[ ${process.arch} ]` , true)
+            .addField('**Platform**' , `[ ${process.platform} ]` , true)
+                  .addField('**My Prefix**' , `[ ${prefix} ]` , true)
+                  .addField('**My Language**' , `[ Java Script ]` , true)
+                  .setFooter('By |!                  iiMostafaYT™#1001')
+    })
 }
 });
  

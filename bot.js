@@ -10,10 +10,9 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const queue = new Map();
 const UserBlocked = new Set();
 const prefix = '*'
- 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity( GMZN , 'LISTENING');
+  client.user.setGame(`*mhelp || GMZN Host ,`," {type:'LISTENING'}")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')

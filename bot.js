@@ -58,6 +58,7 @@ client.on('message', message => {
 //كود انشاء 200 لون
 
 client.on('message', function(message) {
+var prefix = "*"
     if(!message.channel.guild) return;
     if(message.content === 'ccolors') {
     if(message.member.hasPermission('MANAGE_ROLES')) {

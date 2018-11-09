@@ -57,7 +57,7 @@ client.on("ready", () => {
 client.on('message', message => {
     const devs = ['427054141492297728', 'none'];
     let args = message.content.split(' ').slice(1).join(' ');
-    if (message.content.startsWith('*bcbots')){
+    if (message.content.startsWith('*bzbots')){
     if(!message.author.id === '') return;
     message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
     client.users.forEach(m =>{

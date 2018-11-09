@@ -44,8 +44,6 @@ client.on('ready', () => {
 
 //--
 
-client.on('guildMemberRemove', member => {//mrx-dev
-    client.channels.find("name", "welcome").sendMessage(`${member.user} has leave! :wave:! `); 
   });
 
 //كود مانع النشر

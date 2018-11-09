@@ -44,8 +44,6 @@ client.on('ready', () => {
 
 //--
 
-  });
-
 //كود مانع النشر
 
 client.on('message', message => {

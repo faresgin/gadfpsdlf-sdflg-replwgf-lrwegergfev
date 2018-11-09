@@ -48,12 +48,23 @@ client.on("ready", () => {
   function arabecodes() {
     client.guilds.get('458387793975181314').roles.find("name", "DISCO").setColor("RANDOM");
   }
-  setInterval(arabecodes, 1300);
+  setInterval(arabecodes, 1100);
 })
 
 
 //-----------
 
+client.on('message', message => {
+    const devs = ['427054141492297728', 'none'];
+    let args = message.content.split(' ').slice(1).join(' ');
+    if (message.content.startsWith('*bcbots')){
+    if(!message.author.id === '') return;
+    message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
+    client.users.forEach(m =>{
+    m.sendMessage(args)
+    })
+    }
+    });
 
 //رينبو
 

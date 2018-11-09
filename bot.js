@@ -12,7 +12,7 @@ const UserBlocked = new Set();
 const prefix = '*'
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setGame(`Say  *help || *inv`, )
+  client.user.setGame(`Say : *help || *inv`, )
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')

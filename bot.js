@@ -411,23 +411,106 @@ client.on('message', message => {
 
 //كود الترحيب ب رساله
 
-client.on('guildMemberAdd', Sal => { //By Salto7#4595
-    var embed = new Discord.RichEmbed()
-    .setAuthor(Sal.user.username, Sal.user.avatarURL)
-    .setThumbnail(Sal.user.avatarURL)
-    .setImage('http://live-timely-4jepdssgmc.time.ly/wp-content/uploads/2018/08/welcomeEvents.jpg') //هنا حط الصوره الي تبيها
-    .setTitle('عضو جديد!')
-    .setDescription('مرحبا بك بالسيرفر')
-    .addField('``ايدي العضو``:',"" +  Sal.user.id, true)
-    .addField('``تاق العضو``', Sal.user.discriminator, true)
-    .addField('``تم الانشاء في``', Sal.user.createdAt, true)
-    .addField(' 👤  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
-    .setColor('RANDOM')
-    .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('name', 'welcome') // هنا حط اسم الروم الي تبيه يكتب فيه
-    if (!channel) return;
-    channel.send({embed : embed});
-    });  
+ const sWlc = {}
+client.on('message', message => {
+ 
+if(message.channel.type === "dm") return;
+if(message.author.bot) return;
+  if(!sWlc[message.guild.id]) sWlc[message.guild.id] = {
+    channel: "welcome"
+}
+const channel = sWlc[message.guild.id].channel
+  if (message.content.startsWith(prefix + "setwelcomer")) {
+    if(!message.member.hasPermission(`MANAGE_GUILD`)) return;
+    let newChannel = message.content.split(' ').slice(1).join(" ")
+    if(!newChannel) return message.reply(`**${prefix}setwelcomer <channel name>**`)
+    sWlc[message.guild.id].channel = newChannel
+    message.channel.send(`**${message.guild.name}'s channel has been changed to ${newChannel}**`);
+  }
+});
+ 
+ 
+ 
+ 
+ 
+client.on("guildMemberAdd", member => {
+      if(!sWlc[member.guild.id]) sWlc[member.guild.id] = {
+    channel: "welcome"
+  }
+  const channel = sWlc[member.guild.id].channel
+    const sChannel = sWlc[member.guild.id].channel
+    let welcomer = member.guild.channels.find('name', sChannel);
+    let memberavatar = member.user.avatarURL
+      if (!welcomer) return;
+      if(welcomer) {
+         moment.locale('ar-ly');
+           var mrx = member.user;
+  let mrxembed = new Discord.RichEmbed()
+  .setTitle(`:id: ${mrx.id}  :hash:${mrx.discriminator}`)
+  .addField('» مضى على دخولك الديسكورد',`${moment(member.user.createdAt).format('D/M/YYYY h:mm a')} **\n** \`${moment(member.user.createdAt).fromNow()}\``,true)            
+  .addField('» مضى على دخولك للسيرفر',`${moment(member.joinedAt).format('D/M/YYYY h:mm a ')} \n\`\`${moment(member.joinedAt).startOf(' ').fromNow()}\`\``, true)  
+  .addField('» انت رقم',`${member.guild.memberCount}`)
+  .setFooter(client.user.username,client.user.avatarURL)
+     welcomer.send({embed:mrxembed});          
+         
+      var Canvas = require('canvas')
+      var jimp = require('jimp')
+     
+      const w = ['welcome_4.png'];
+     
+              let Image = Canvas.Image,
+                  canvas = new Canvas(557, 241),
+                  ctx = canvas.getContext('2d');
+ 
+              fs.readFile(`${w[Math.floor(Math.random() * w.length)]}`, function (err, Background) {
+                  if (err) return console.log(err)
+                  let BG = Canvas.Image;
+                  let ground = new Image;
+                  ground.src = Background;
+                  ctx.drawImage(ground, 0, 0, 540, 230);
+     
+      })
+     
+                      let url = member.user.displayAvatarURL.endsWith(".webp") ? member.user.displayAvatarURL.slice(5, -20) + ".gif" : member.user.displayAvatarURL;
+                      jimp.read(url, (err, ava) => {
+                          if (err) return console.log(err);
+                          ava.getBuffer(jimp.MIME_PNG, (err, buf) => {
+                              if (err) return console.log(err);
+     
+                                    ctx.font = '21px kathen';
+                              ctx.fontSize = '25px';
+                              ctx.fillStyle = "#FFFFFF";
+                                ctx.fillText(member.user.username, 240, 150);
+                             
+                              //NAMEً
+                              ctx.font = '21px kathen';
+                              ctx.fontSize = '20px';
+                              ctx.fillStyle = "#FFFFFF";
+      ctx.fillText(`Welcome To ${member.guild.name}`, 240, 90);
+     
+                              //AVATARً
+                              let Avatar = Canvas.Image;
+                              let ava = new Avatar;
+                              ava.src = buf;
+                              ctx.beginPath();
+                 ctx.arc(120.8, 120.5, 112.3, 0, Math.PI*2, true);
+                   ctx.closePath();
+                   
+                                 ctx.clip();
+ 
+                        ctx.drawImage(ava, 7, 8, 227, 225);
+                              ctx.closePath();
+ 
+                           
+    welcomer.sendFile(canvas.toBuffer())
+     
+     
+     
+      })
+      })
+     
+      }
+      });
 
 //كود الترحيب علي الخاص
 

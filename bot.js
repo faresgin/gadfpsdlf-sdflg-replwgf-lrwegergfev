@@ -58,9 +58,8 @@ client.on('message', message => {
 //كود انشاء 200 لون
 
 client.on('message', function(message) {
-var prefix = "*"
     if(!message.channel.guild) return;
-    if(message.content === 'ccolors') {
+    if(message.content === '*ccolors') {
     if(message.member.hasPermission('MANAGE_ROLES')) {
     setInterval(function(){})
     message.channel.send('يتم انشاء 200 لون انتضر | ▶️')
@@ -71,7 +70,7 @@ var prefix = "*"
     });
     
     client.on('message', message=>{
-    if (message.content === 'ccolors'){
+    if (message.content === '*ccolors'){
     if(!message.channel.guild) return;
     if (message.member.hasPermission('MANAGE_ROLES')){
     setInterval(function(){})

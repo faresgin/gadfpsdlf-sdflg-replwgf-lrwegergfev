@@ -269,7 +269,7 @@ message.channel.send(`**:moneybag: | ${message.author.username}, has transferrer
 //كود اعطاء ربة اول ما يدخل
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","༺ Members ༻"));
+    member.addRole(member.guild.roles.find("name","! 𝔼𝕄ℙ𝕀ℝ𝔼S !"));
     });
 
 //tttttttt
@@ -721,6 +721,8 @@ if (message.content === "*help") {
 **رابط سيرفر الدعم الفني :**
 **https://discord.gg/V5qnQY4**
 
+**مبرمج ومسؤول الاسضتافه :**
+**@Ahmed Magdy#8417 **
 
    **[❖═══════ الاوامر عامه ═══════❖]**
 

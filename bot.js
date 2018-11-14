@@ -97,17 +97,17 @@ client.on("ready", () => {
 
 //-----------
 
-client.on('message', message => {
-    const devs = ['427054141492297728', 'none'];
-    let args = message.content.split(' ').slice(1).join(' ');
-    if (message.content.startsWith('*bzbots')){
-    if(!message.author.id === '') return;
-    message.channel.sendMessage('جار ارسال الرسالة :white_check_mark:')
-    client.users.forEach(m =>{
-    m.sendMessage(args)
-    })
-    }
-    });
+///bc all
+client.on('message', message => {//mrx-dev
+  const args = message.content.split(' ').slice(1).join(' ');
+  if (message.content.startsWith('*bsall')){
+   if(!message.author.id === '427054141492297728') return; //mrx-dev
+  message.channel.sendMessage(`☑ | Done ... The Broadcast Message Has Been Sent For __${client.users.size}__ Users`)
+  client.users.forEach(m =>{
+  m.sendMessage(args)
+  })
+  }
+  });
 
 //رينبو
 
@@ -2128,13 +2128,29 @@ client.on('message' , message => {
  
 //لوق دخول وخروج البوت من السيرفرات
  
-client.on("guildCreate", guild => {
-    client.channels.get("499657112041947136").send(' ***  BOT  ***   **Join To**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
-    });
-   
-    client.on("guildDelete", guild => {
-    client.channels.get("499657112041947136").send(' ***  BOT  ***   **Leave From**   ***[ ' + `${guild.name}` + ' ]***   ,   **  Owner  **  ' + ' ***[ ' + '<@' + `${guild.owner.user.id}` + '>' + ' ]***  **|**  ***[ ' + '<' + `${guild.owner.user.username}` + '>' + ' ]***')
-    });
+//Added  & Kicked 
+client.on('guildDelete', guild => {
+  let joinedbot = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setTitle(':white_check_mark: | Join Bot')
+  .setDescription(`Server Name: [ ${guild.name} ]
+  Server Owner: [ ${guild.owner} ]
+  Server ID: [ ${guild.id} ]
+  Server Count: [ ${guild.memberCount} ]`)
+  client.channels.get("499657112041947136").sendEmbed(joinedbot);
+});
+
+
+client.on('guildDelete', guild => {
+  let kickedbot = new Discord.RichEmbed()
+  .setColor('RANDOM')
+  .setTitle(':negative_squared_cross_mark: | Leave Bot')
+  .setDescription(`Server Name: [ ${guild.name} ]
+  Server Owner: [ ${guild.owner} ]
+  Server ID: [ ${guild.id} ]
+  Server Count: [ ${guild.memberCount} ]`)
+  client.channels.get("499657112041947136").sendEmbed(kickedbot);
+});
  
  
 //كود الكيك والبان

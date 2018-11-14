@@ -269,7 +269,7 @@ message.channel.send(`**:moneybag: | ${message.author.username}, has transferrer
 //كود اعطاء ربة اول ما يدخل
 
 client.on('guildMemberAdd', member=> {
-    member.addRole(member.guild.roles.find("name","! 𝔼𝕄ℙ𝕀ℝ𝔼S !"));
+    member.addRole(member.guild.roles.find("name","Members"));
     });
 
 //tttttttt

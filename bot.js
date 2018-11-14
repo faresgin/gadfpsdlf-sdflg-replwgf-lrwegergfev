@@ -44,16 +44,6 @@ client.on('ready', () => {
 
 //--
 
-//كود مانع النشر
-
-client.on('message', message => {
-    var args = message.content.split(/[ ]+/)
-    if(message.content.includes('.com')){
-      if(!message.member.hasPermission('MANAGE_MESSAGE'))
-        message.delete()
-    return message.reply(`**ممنوع نشر الروابط من فضلك تجنبا للميوت:x:**`)
-    }
-});
 
 //قسم الالوان
 //كود انشاء 200 لون
@@ -713,7 +703,6 @@ if (message.content === "*help") {
 ** وسرعة البوت سريعه جدا GMZN Host علي خادم**
 **البوت فيه اكواد حمايه من اي تهكير**
 **يعني سيرفرك البوت هيكونو في امان**
-**ابوت فيه كود مانع لنشر الروابط**
 
 **رابط اضافة البوت :robot: :**
 **http://cutt.us/GMZNBot**
